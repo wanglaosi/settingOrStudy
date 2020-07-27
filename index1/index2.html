@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.div {
+				width: 700px;
+				height: 1000px;
+				margin: auto;
+				background-image: url(img/u=3584639280,3285295801&fm=26&gp=0.jpg);
+				background-repeat:no-repeat;
+				background-size:cover;
+				-webkit-background-size:cover;
+				-o-background-size:cover;
+				background-position:center0;
+			}
+			.top {
+				width: 100%;
+				height: 200px;
+			}
+			.centent {
+				width: 86%;
+				height: 200px;
+				margin: auto;
+			}
+			td {
+				line-height: 40px;
+			}
+			li{
+				list-style: none;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-decoration: none;
+				box-sizing: border-box;
+			}
+			.swiper{
+				width: 520px;
+				height: 280px;
+				border: 1px solid black;
+				margin: auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.swiper ul{
+				width: 9999px;
+				overflow: hidden;
+				/*清除浮动*/
+				/*transition: 1s;*/
+			}
+			.swiper li{
+				float: left;
+				/*width: 520px;*/
+			}
+			/*按钮*/
+			.btn{
+				position: absolute;
+				top: 50%;
+				left: -4px;
+				width: 30px;
+				height: 30px;
+				
+				margin-top: -15px;
+				text-align: center;
+				line-height: 27px;
+				border-radius: 50%;
+				font-size: 26px;
+				color: #fff;
+				background: #666;
+				opacity: .5;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			.next{
+				left: 494px;
+			}
+			.transi{
+				transition: 500ms;
+			}
+			/*小圆点*/
+			ul.item{
+				width: 48px;
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				/*清除浮动*/
+				overflow: hidden;
+				z-index: 1000;
+			}
+			.item li{
+				float: left;
+				width: 10px;
+				height: 10px;
+				border: 1px solid #fff;
+				background: #fff;
+				border-radius: 50%;
+				margin: 0 3px;
+			}
+			li.active{
+				background: gray;
+			}
+		</style>
+	</head>
+	<body background="img/u=1208711812,3141867159&fm=26&gp=0.jpg">
+		<div class="div">
+			<div class="top">
+				<img src="img/u=1804142982,1901782595&fm=26&gp=0.jpg" width="100%" height="200px" />
+			</div>
+			<div class="centent">
+				<br />
+				<div class="swiper">
+					<!--图片区域-->
+					<ul class="imgBox">
+						<li><img src="img/u=1173569149,1405934366&fm=26&gp=0.jpg" alt="" /></li>
+						<li><img src="img/u=3104686528,572431609&fm=26&gp=0.jpg" alt="" /></li>
+					</ul>
+					<!--左右按钮-->
+					<div class="btn pre">&lt;</div>
+					<div class="btn next">&gt;</div>
+					<!--小圆点-->
+					<ul class="item">
+						<!--<li class="active"></li>
+						<li></li>
+						<li></li>-->
+					</ul>
+				</div>
+				<br />
+				<div class="div3">
+					<font>请输入注册信息：</font>
+					<br>
+					<hr width="65%" style="float: left;color: black" />
+				</div>
+				<br />
+				<form>
+				<table>
+					<tr>
+						<td width="60%" align="right">昵称：</td>
+						<td><input type="text" id="name" pattern="^[A-za-Z]"
+  title="昵称以字母开头" required /></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">注册邮箱：</td>
+						<td><input type="email" id="email" required /></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">注册手机：</td>
+						<td><input type="text" id="phone" pattern="^1[0-9]{11}$"
+	title="手机号限制11位数字，首位数字必须为1" required /></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">登录密码：</td>
+						<td><input type="password" id="password" pattern="^[A-Z]+[A-Za-z0-9]{7}"
+	title="须以大写字母开头，可以是数字和字母，必须是8位" required /></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">中心：</td>
+						<td align="center"><select>
+							<option>xxxx中心1</option>
+							<option>xxxx中心2</option>
+							<option>xxxx中心3</option>
+							<option>xxxx中心4</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">性别：</td>
+						<td align="center"><input type="radio" value="" name="ok">男<input type="radio" value="" name="ok">女</td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">学历：</td>
+						<td align="center"><select>
+							<option>高中生</option>
+							<option>专科生</option>
+							<option>本科生</option>
+							<option>研究生</option>
+							<option>博士生</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td width="60%" align="right">自我介绍：</td>
+						<td><textarea height='200px' placeholder="请输入自我介绍!"></textarea></td>
+					</tr>
+				</table>
+				<center>
+				<input type="submit" value="立即提交" style="width: 70px;height: 22px;background-color: darkturquoise;color: aliceblue;border: 0;border-radius: 10px;" /></center>
+				</form>
+				
+			</div>
+		</div>
+		<script>
+			window.onload=function(){
+				let swiper = document.querySelector(".swiper"),
+					pre = swiper.querySelector(".pre"),
+					next = swiper.querySelector(".next"),
+					_ul = swiper.querySelector(".imgBox"),//图片ul
+					ali = _ul.querySelectorAll('li'),
+					aImg = swiper.querySelectorAll("li img"),
+					imgW = aImg[0].offsetWidth,//需要window.onload
+					index = 1,//计算滚动到哪张图片
+					isTransitioned = true,//判断动画是否已完成
+					item = swiper.querySelector('.item');
+				
+				//克隆第一张图片，添加到图片队列的最后面
+				let cloneLi = ali[0].cloneNode(true);
+				_ul.appendChild(cloneLi);
+				//克隆最后一张图片，添加到图片队列的最前面
+				let cloneLastLi = ali[ali.length-1].cloneNode(true);
+					//插入方法1：
+		//              _ul.insertBefore(cloneLastLi,ali[0]);
+					//插入方法2
+				_ul.prepend(cloneLastLi);
+				
+				//点击右边按钮
+				next.addEventListener("click",()=>{
+					if(isTransitioned){
+						index++;//先++再设置
+						move();
+						fenyeq(index);  
+					}
+				})
+				
+				
+				//初始化图片队列：
+				_ul.style.transform="translateX("+(-imgW*index)+"px)";
+				//点击左边按钮
+				pre.addEventListener("click",()=>{
+					if(isTransitioned){
+						index--;
+						move();
+						fenyeq(index);
+					}
+				})
+				
+				setInterval(function(){
+					if(isTransitioned){
+						index++;
+						move();
+						fenyeq(index);
+					}
+				},4000)
+				
+				//监听动画结束
+				_ul.addEventListener("transitionend",()=>{//给ul加了transi
+					if(index == aImg.length+1){//边界判断
+						index = 1;
+						_ul.classList.toggle("transi");//移除ul的transi
+						_ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+					}
+					if(index==0){
+						index=aImg.length;
+						_ul.classList.toggle("transi");//移除ul的transi
+						_ul.style.transform="translateX("+(-imgW*index)+"px)";//瞬间变回第一张
+					}
+					isTransitioned = true;//每次动画结束都判断
+				})
+				
+				
+				//根据图片的张数生成分页器
+				for(let i=0;i<aImg.length;i++){
+					var newLi = document.createElement('li');
+					item.appendChild(newLi);
+				}
+				//第一个小圆点添加样式
+				item.children[0].classList.add('active');
+				//给分页器添加点击事件
+				for(let j=0;j<item.children.length;j++){
+						item.children[j].addEventListener('click',()=>{
+							for(let q=0;q<item.children.length;q++){
+								item.children[q].classList.remove('active');
+							}
+							item.children[j].classList.add('active');
+							index = j+1;
+							_ul.classList.add('transi');
+							_ul.style.transform="translateX("+(-imgW*index)+"px)";
+						})
+					}
+				//点击左右按钮分页器跟随
+				function fenyeq(index){
+					for(let k=0;k<item.children.length;k++){
+						item.children[k].classList.remove('active');
+					}
+					index = index -1;
+					index = index==item.children.length?0:index;//左按钮边界
+					index = index<0?item.children.length-1:index;//右按钮边界
+					item.children[index].classList.add('active');
+				}
+				
+				function move(){
+					_ul.classList.add("transi");
+					_ul.style.transform="translateX("+(-imgW*index)+"px)";
+					isTransitioned = false;
+				}
+		}
+		</script>
+	</body>
+</html>
