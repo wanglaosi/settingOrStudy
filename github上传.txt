@@ -1,0 +1,4 @@
+1.git add .       （把文件添加到仓库        修改完文件后）    
+2.git commit -m "解释说明"     （把文件提交到仓库）
+3.git remote add origin git@github.com:wanglaosi/wangzhan.git      （本地与远程仓库关联        远程库的名字就是origin，wangzhan.git是要传到GitHub的仓库）
+4.git push origin master    （内容推送）
