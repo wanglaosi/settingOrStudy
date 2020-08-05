@@ -1,0 +1,29 @@
+1.引入animate.css
+2.引入wow.js
+3.javaScript中写new WOW().init();
+4.css中给所有wow类元素设置隐藏 （防止闪烁）：.wow { visibility: hidden; }
+5.<div class="wow animate slideInLeft" data-wow-duration="2s" data-wow-delay="5s" data-wow-offset="10"  data-wow-iteration="10"></div>
+  data-wow-duration（动画持续时间）
+  data-wow-delay（动画延迟时间）
+  data-wow-offset（元素的位置露出后距离底部多少像素执行）
+  data-wow-iteration（动画执行次数）
+
+5.相关动画类名：
+  21. fadeIn             渐现
+  22. fadeInDown         渐现，从上到下
+  23. fadeInDownBig      渐现，从上到下，滑动距离较长
+  24. fadeInLeft         渐现，从左到右
+  25. fadeInLeftBig      渐现，从左到右，滑动距离较长
+  26. fadeInRight        渐现，从右到左
+  27. fadeInRightBig     渐现，从右到左，滑动距离较长
+  28. fadeInUp           渐现，从下到上
+  29. fadeInUpBig        渐现，从下到上，滑动距离较长
+  30. fadeOut            渐隐
+  31. fadeOutDown        渐隐，从上到下
+  32. fadeOutDownBig     渐隐，从上到下，滑动距离较长
+  33. fadeOutLeft        渐隐，从左到右
+  34. fadeOutLeftBig     渐隐，从左到右，滑动距离较长
+  35. fadeOutRight       渐隐，从右到左
+  36. fadeOutRightBig    渐隐，从右到左，滑动距离较长
+  37. fadeOutUp          渐隐，从下到上
+  38. fadeOutUpBig       渐隐，从下到上，滑动距离较长
