@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--放大页面到设备合适的分辨率-->
+		<title>官网首页</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="./js/swiper-bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/banner.css" />
+		<link rel="stylesheet" type="text/css" href="./css/content.css" />
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css" />
+
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 导航 -->
+		<div class="nav index" style="height: 80px;">
+			<div class="containerok">
+				<!-- 公司logo -->
+				<div class="nav-logo"> <a href="index.html"> <img class="logoimg" src="./img/logo.png" alt="尚书数据"> </a> </div>
+				<div class="nav-list">
+					<button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+					<ul class="layui-nav" lay-filter="">
+						<li class="layui-nav-item"><a href="#products">公司产品</a></li>
+						<li class="layui-nav-item"><a href="#system">智能系统</a></li>
+						<li class="layui-nav-item"><a href="#case">成功案例</a></li>
+						<li class="layui-nav-item"><a href="#news">最新动态</a></li>
+						<li class="layui-nav-item"><a href="#contact">联系我们</a></li>
+						<span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 轮播 -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><a><img src="img/banner6.jpg" /></a></div>
+				<div class="swiper-slide"><a><img src="img/homepage-73f5895d64.jpg" /></a></div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+
+			<!-- 如果需要导航按钮 -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+		<!-- 公司产品 -->
+		<div class="products" id="products">
+			<div class="contentS">
+				<header class="wow animated fadeInLeft major">
+					<h2>公司产品</h2>
+				</header>
+				<i class="wow animated fadeInLeft alli pro1">准备好开始使用了吗？</i>
+				<i class="pro2">马上开启，使用人工智能记账</i>
+			</div>
+			<div class="wow animated fadeInLeft proImg1">
+				<img src="img/QQ图片20200803174906.png" />
+			</div>
+			<div class="wow animated fadeInRight proImg2">
+				<img src="img/QQ图片20200803174948.png" />
+			</div>
+		</div>
+		<!-- 智能服务系统 -->
+		<div class=" system" id="system">
+			<div class="contentS">
+				<header class="wow animated fadeInLeft major">
+					<h2>智能服务系统</h2>
+				</header>
+				<i class="wow animated fadeInLeft alli">基于线下专业团队，线上 SaaS 产品的一站式平台，为企业全生命周期提供发票、财税、用工、金融 等赋能服务。</i>
+				<div class="wow animated fadeInLeft item">
+					<div class="item1">
+						<a class="son1" href="javascript:void(0);">
+							<div class="son">
+								<span class="iconfont iconkaipiao"></span>
+								开票系统
+							</div>
+						</a>
+					</div>
+					<div class="item2">
+						<a class="son2" href="javascript:void(0);">
+							<div class="son">
+								<span class="iconfont iconbaoxiao"></span>
+								报销系统
+							</div>
+						</a>
+					</div>
+					<div class="item3">
+						<a class="son3" href="javascript:void(0);">
+							<div class="son">
+								<span class="iconfont iconjizhangguanli"></span>
+								记账系统
+							</div>
+						</a>
+					</div>
+					<div class="item4">
+						<a class="son4" href="javascript:void(0);">
+							<div class="son">
+								<span class="iconfont icongongzi"></span>
+								工资系统
+							</div>
+						</a>
+					</div>
+					<div class="item5">
+						<a class="son5" href="javascript:void(0);">
+							<div class="son">
+								<span class="iconfont iconshoutuorenchukuanshenqing"></span>
+								出款系统
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 系统内容详情 -->
+			<div class="systemContent">
+				<div class="contentC">
+					<div class="wow animated fadeInUp contentC1">
+						<div class="imgSize"><img src="img/piaoju.png" /></div>
+						<h4>票据识别</h4>
+						<p id="pClamp" title="高精准度的票据识别，智能费用划分"> 高精准度的票据识别，智能费用划分 </p>
+					</div>
+					<div class="contentCNull"></div>
+					<div class="wow animated fadeInUp contentC2">
+						<div class="imgSize"><img src="./img/bangong.jpg" ></div>
+						<h4>移动办公</h4>
+						<p id="pClamp" title="极速审批流程，推动企业数字化运营"> 极速审批流程，推动企业数字化运营 </p>
+					</div>
+					<div class="contentCNull"></div>
+					<div class="wow animated fadeInUp contentC3">
+						<div class="imgSize"><img src="img/caishui.png" ></div>
+						<h4>财务系统</h4>
+						<p id="pClamp" title="去中心化记账模式，追述票据源头，健康企业财务"> 去中心化记账模式，追述票据源头，健康企业财务 </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 成功案例 -->
+		<div class="case" id="case">
+			<div class="contentS">
+				<header class="wow animated fadeInLeft major">
+					<h2>成功案例</h2>
+				</header>
+				<i class="wow animated fadeInLeft alli">为集团公司提供全方位的财税解决方案，一站式服务</i>
+			</div>
+			<div class="caseContent">
+				<div class="wow animated fadeInUp caseFlexContent" data-wow-delay="0.3s" >
+					<div class="userImg"><div class="thisok"><img class="user1" src="img/user1.jpg" /></div></div>
+					<center><strong>张先生/经理</strong></center>
+					<p title="入餐饮行业快20年了，以前没觉着财务账有多重要，以前找人代账，报表也只看几个重要的资金、销售额、利润等数据。营改增、金税三期上线后，企业的业务与财税的关联度要求更高了，必须及时了解企业的经营状况和涉税相关内容。用了好会计，我通过手机就可以看到企业经营报表。发票进销稽核对比、税务风险测评非常直观，简单，还有预警提示，做到心中有数，财税无忧！">入餐饮行业快20年了，以前没觉着财务账有多重要，以前找人代账，报表也只看几个重要的资金、销售额、利润等数据。营改增、金税三期上线后，企业的业务与财税的关联度要求更高了，必须及时了解企业的经营状况和涉税相关内容。用了好会计，我通过手机就可以看到企业经营报表。发票进销稽核对比、税务风险测评非常直观，简单，还有预警提示，做到心中有数，财税无忧！</p>
+				</div>
+				<div class="wow animated fadeInUp caseFlexContent" data-wow-delay="0.6s">
+					<div class="userImg"><div class="thisok"><img class="user1" src="img/user2.jpg" /></div></div>
+					<center><strong>王先生/会计</strong></center>
+					<p title="用了好会计，我们的整个财务效率提升了很多，财务人员更好管理了。互联网化的软件在线随时应用，也很省心。对于一些涉税处理和申报更是简化了很多、还能够及时与新政匹配，清晰明了！财务报表的月报、季报自动生成，随时分享给老板，不仅可以让我参与到企业经营中，也让老板及时了解企业的运营、快速决策，真是太省事儿、太智能了！">用了好会计，我们的整个财务效率提升了很多，财务人员更好管理了。互联网化的软件在线随时应用，也很省心。对于一些涉税处理和申报更是简化了很多、还能够及时与新政匹配，清晰明了！财务报表的月报、季报自动生成，随时分享给老板，不仅可以让我参与到企业经营中，也让老板及时了解企业的运营、快速决策，真是太省事儿、太智能了！</p>
+				</div>
+				<div class="wow animated fadeInUp caseFlexContent" data-wow-delay="0.9s">
+					<div class="userImg"><div class="thisok"><img class="user1" src="img/user3.jpeg" /></div></div>
+					<center><strong>马女士/会计</strong></center>
+					<p title="像我们这样的公司,每天的资金流水和往来账目很多,一天下来，仅理票据、录入日记账、录入和管理发票，头晕脑胀！用了好会计，日记账一键直接导入、发票扫码录入，最头疼的理票问题解决了！而且发票还可以智能生成凭证，和财务对账更清晰，也让我这个小出纳的财务技能提升的突飞猛进呢！">像我们这样的公司,每天的资金流水和往来账目很多,一天下来，仅理票据、录入日记账、录入和管理发票，头晕脑胀！用了好会计，日记账一键直接导入、发票扫码录入，最头疼的理票问题解决了！而且发票还可以智能生成凭证，和财务对账更清晰，也让我这个小出纳的财务技能提升的突飞猛进呢！</p>
+				</div>
+				<div class="wow animated fadeInUp caseFlexContent" data-wow-delay="1.2s">
+					<div class="userImg"><div class="thisok"><img class="user1" src="img/user4.jpeg" /></div></div>
+					<center><strong>李女士/专员</strong></center>
+					<p title="之前经常在电脑前做账，做凭证科目要一个一个的摁，很麻烦，得了严重的颈椎病。用了好会计灵活智能的凭证模板，科目自动匹配，一键生成凭证。每月需要至少几天的月结工作，应用了好会计的智能月末检测，最多用半个小时就处理好了。涉税申报内容与企业实际账目自动关联，对于我们财务处理涉税业务真是帮了大忙，还能及时发现、提出业务过程中涉及到的一些问题， 让我觉着做个会计也很有成就感。">之前经常在电脑前做账，做凭证科目要一个一个的摁，很麻烦，得了严重的颈椎病。用了好会计灵活智能的凭证模板，科目自动匹配，一键生成凭证。每月需要至少几天的月结工作，应用了好会计的智能月末检测，最多用半个小时就处理好了。涉税申报内容与企业实际账目自动关联，对于我们财务处理涉税业务真是帮了大忙，还能及时发现、提出业务过程中涉及到的一些问题， 让我觉着做个会计也很有成就感。</p>
+				</div>
+			</div>
+			<div class="wow animated fadeInUp caseAll">
+				
+			</div>
+		</div>
+		<!-- 最新动态 -->
+		<div class="news" id="news">
+			<div class="contentS">
+				<header class="wow animated fadeInLeft major">
+					<h2>最新动态</h2>
+				</header>
+				<i class="wow animated fadeInLeft alli">了解最新最全的税务信息</i>
+			</div>
+			<div class="wow animated fadeInRight NewsTitle">
+				<div class="NewsTitles" id="title1" onclick="qiehuan(this)">
+					最新政策
+				</div>
+				<div class="NewsTitles" id="title2" onclick="qiehuan(this)">
+					实务实操
+				</div>
+				<div class="NewsTitles" id="title3" onclick="qiehuan(this)">
+					产品形态
+				</div>
+			</div>
+			<div class="wow animated fadeInLeft NewsContent" id="titleC1">
+				<div class="NewsContentImg">
+					<img src="img/1.png" />
+					<div class="mask">报税新政策</div>
+				</div>
+				<div class="NewsContentText">
+					<div class="NewsTextContent">
+						<ul>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">衔接道真乡村振兴 茅台帮扶再谱新篇 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团召开党委会研究多项议题 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="NewsContent" id="titleC2">
+				<div class="NewsContentImg">
+					<img src="img/2.png" />
+					<div class="mask">实务实操</div>
+				</div>
+				<div class="NewsContentText">
+					<div class="NewsTextContent">
+						<ul>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">衔接道真乡村振兴 茅台帮扶再谱新篇 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团召开党委会研究多项议题 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="NewsContent" id="titleC3">
+				<div class="NewsContentImg">
+					<img src="img/4.png" />
+					<div class="mask">公司产品介绍</div>
+				</div>
+				<div class="NewsContentText">
+					<div class="NewsTextContent">
+						<ul>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">衔接道真乡村振兴 茅台帮扶再谱新篇 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团召开党委会研究多项议题 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台学院即将达到办学预定规模 王焱、刘大能率队现场办公 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">茅台集团与上海城投集团座谈 </div><div class="textRight">2020-7-17</div></li>
+							<li><div class="textLife">巩固茅台帮扶成果 衔接道真乡村振兴 </div><div class="textRight">2020-7-17</div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系我们 -->
+		<div class="contact" id="contact">
+			<div class="contentS">
+				<header class="wow animated fadeInLeft major">
+					<h2>联系我们</h2>
+				</header>
+				<i class="wow animated fadeInLeft alli">投资、业务合作、产品使用问题</i>
+			</div>
+			<div class="wow animated fadeInUp phone" data-wow-delay="0.5s">
+				✆ 移动电话：132XXXXXXXX
+				<br>
+				☎ 固定电话：400-699-8950
+			</div>
+		</div>
+		<!-- 底部版权栏 -->
+		<div class="footer" id="footer">
+			<div class="footerS">
+				<input type="image" src="img/logo.png" />
+				<div class="footerC">
+					<div class="footerCli">
+						<span class="footerSpan">产品</span>
+						<a target="_blank" href="http://www.hubushangshu.com/">户部尚书</a>
+						<a target="_blank" href="http://www.hubushilang.com/">户部侍郎</a>
+					</div>
+					<div class="footerCli">
+						<span class="footerSpan">关于我们</span>
+						<a target="_blank" href="javascript:void(0)">公司简介</a>
+						<a target="_blank" href="javascript:void(0)">隐私政策</a>
+						<a target="_blank" href="javascript:void(0)">服务协议</a>
+					</div>
+					<div class="footerCli">
+						<span class="footerSpan">服务</span>
+						<a target="_blank" href="javascript:void(0)">代公司注册</a>
+						<a target="_blank" href="javascript:void(0)">代跑业务</a>
+						<a target="_blank" href="javascript:void(0)">代缴五险一金</a>
+						<a target="_blank" href="javascript:void(0)">代账记账</a>
+						<a target="_blank" href="javascript:void(0)">财税服务</a>
+					</div>
+					<div class="footerCli">
+						<span class="footerSpan">商务合作</span>
+						<a target="_blank" href="javascript:void(0)">投资者</a>
+						<a target="_blank" href="javascript:void(0)">加盟商</a>
+					</div>
+					<div class="footerCli footerCliLast">
+						<img src="img/bg1.jpg" />
+						<span>小程序</span>
+					</div>
+					<div class="footerCli footerCliLast">
+						<img src="img/bg1.jpg" />
+						<span>公众号</span>
+					</div>
+					<div class="footerCli footerCliLast">
+						<img src="img/bg1.jpg" />
+						<span>新浪微博</span>
+					</div>
+				</div>
+				
+				<div class="dizhi">
+					<div class="dizhiCli1">公司地址：贵阳市南明区花果园金融街1号楼3101</div><div class="dizhiCli2">工作时间：周一~周五10：00-18：00</div><div class="dizhiCli3">联系我们：400-699-8950</div>
+				</div>
+			</div>
+			<div class="beian">
+				<div class="beianjuzhong">© 2019-2020 贵州尚书数据科技有限公司 版权所有 | <img src="img/下载.png" > 黔ICP备19013117号</div>
+			</div>
+		</div>
+		
+		<script src="./js/layui.js"></script>
+		<!-- 响应式导航栏 -->
+		<script>
+			//一般直接写在一个js文件中
+			layui.use(['jquery', 'element', 'carousel'], function() {
+				var $ = layui.jquery,
+					element = layui.element,
+					carousel = layui.carousel
+
+				//滚动监听
+				$(window).scroll(function() {
+					var scr = $(document).scrollTop();
+					scr > 0 ? $(".nav").addClass('scroll') : $(".nav").removeClass('scroll');
+				});
+
+
+				//导航切换
+				var btn = $('.nav').find('.nav-list').children('button'),
+					spa = btn.children('span'),
+					ul = $('.nav').find('.nav-list').children('.layui-nav');
+				btn.on('click', function() {
+					if (!$(spa[0]).hasClass('spa1')) {
+						spa[0].className = 'spa1';
+						spa[1].style.display = 'none';
+						spa[2].className = 'spa3';
+						$('.nav')[0].style.height = 90 + ul[0].offsetHeight + 'px';
+					} else {
+						spa[0].className = '';
+						spa[1].style.display = 'block';
+						spa[2].className = '';
+						$('.nav')[0].style.height = 80 + 'px';
+					}
+				});
+			});
+		</script>
+		<!-- swiper轮播 -->
+		<script type="text/javascript">
+			window.onload = function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					direction: 'horizontal', // vertical垂直切换选项   horizontal横向切换选项
+					autoplay: 500, //轮播时间
+					loop: true, // 循环模式选项   如果不加，则最后一张不能与第一张无缝链接
+					autoplay: true, //自动轮播
+					observer: true, //修改swiper自己或子元素时，自动初始化swiper
+					observeParents: true, //修改swiper的父元素时，自动初始化swiper
+
+					// 如果需要分页器
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true, //设置小圆点是否可以点击，点击切换图片，不设置则不能点击
+					},
+
+					// 如果需要前进后退按钮
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+
+					//用户触碰，拖动，点击swiper之后，是否禁止autoplay。默认为true：停止。如果设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
+					autoplay: {
+						disableOnInteraction: false,
+						delay: 2000,
+					},
+				})
+			}
+		</script>
+		<!-- wow.js和animate.css配置 -->
+		<script type="text/javascript">
+			var wow = new WOW({
+				boxClass: 'wow',
+				animateClass: 'animated',
+				offset: 0,
+				mobile: true,
+				live: true
+			});
+			wow.init();
+		</script>
+		<!-- 内容缓慢显示 -->
+		<script>
+			
+		</script>
+		<!-- 鼠标经过服务系统部分，添加动画效果 -->
+		<script type="text/javascript">
+			$(".thisok").mouseover(function(){
+			  $('.thisok').addClass('zoomIn');
+			  setTimeout(function(){
+				   $('.thisok').removeClass('zoomIn');
+			  },1500)
+			});
+		</script>
+		
+		<!-- 最新动态切换 -->
+		<script>
+			$("#title1").css({'background-color':'#0080C0', 'color':'white'});
+			$("#titleC1").css('display','block');
+			$("#titleC2,#titleC3").css('display','none');
+			// 点击选项，切换内容
+			function qiehuan(why) {
+				$("#title1,#title2,#title3").css({'background-color':'', 'color':''});
+				
+				var qiehuanId = why.id.replace(/[^0-9]/ig,"");  // 正则表达式截取div的id字符串中的数字
+				$("#title"+qiehuanId).css({'background-color':'#0080C0', 'color':'white'});
+				
+				$("#titleC1,#titleC2,#titleC3").css('display','none');
+				$("#titleC"+qiehuanId).css('display','block');
+			
+				$("#titleC"+qiehuanId).addClass("animated fadeInLeft ");
+			}
+			// new Vue({
+			// 	el:"#news",
+			// 	data(): {
+			// 		return{
+			// 			newsList:[
+			// 				{
+			// 					name:'最新政策',
+			// 					imgUrl:'
+			// 					child: [
+			// 						{ title: '项目一', child: 'list1' },
+			// 						{ title: '项目二', child: 'list2' },
+			// 						{ title: '项目三', child: 'list3' },
+			// 						{ title: '项目四' },
+			// 						{ title: '项目五' }
+			// 					]
+			// 				},
+			// 				{
+			// 					name:'实务实操',
+			// 					child: [
+			// 						{ title: '项目一', child: 'list1' },
+			// 						{ title: '项目二', child: 'list2' },
+			// 						{ title: '项目三', child: 'list3' },
+			// 						{ title: '项目四' },
+			// 						{ title: '项目五' }
+			// 					]
+			// 				},
+			// 				{
+			// 					name:'产品形态',
+			// 					child: [
+			// 						{ title: '项目一', child: 'list1' },
+			// 						{ title: '项目二', child: 'list2' },
+			// 						{ title: '项目三', child: 'list3' },
+			// 						{ title: '项目四' },
+			// 						{ title: '项目五' }
+			// 					]
+			// 				}
+			// 			]
+			// 		}
+			// 	}
+			// })
+		</script>
+	</body>
+</html>
