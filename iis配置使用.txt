@@ -8,5 +8,6 @@
 8.网站名、应用程序池选defaultapppool、物理路径、ip地址、端口、主机名
 9.确定
 10.C:\Windows\System32\drivers\etc    记事本打开hosts文件
-11.在最后，加入ip地址 主机名   如192.168.1.1 www.xxxx.com
+11.在最后，加入ip地址 主机名   如192.168.3.24 www.xxxx.com
 12.保存，访问www.xxxx.com即成功
+13.同一局域网下访问只能访问ip，http://192.168.3.24/
