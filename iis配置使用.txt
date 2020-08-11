@@ -1,0 +1,12 @@
+1.控制面板，找到程序和功能
+2.左侧启用或关闭windows功能
+3.打开internet information services
+4.勾选web管理工具和万维网服务
+5.确定等待启用，启用后重启电脑
+6.控制面板，管理工具，iis    或直接搜索iis打开
+7.连接，右键添加网站
+8.网站名、应用程序池选defaultapppool、物理路径、ip地址、端口、主机名
+9.确定
+10.C:\Windows\System32\drivers\etc    记事本打开hosts文件
+11.在最后，加入ip地址 主机名   如192.168.1.1 www.xxxx.com
+12.保存，访问www.xxxx.com即成功
