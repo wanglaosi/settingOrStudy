@@ -8,7 +8,7 @@
 		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="./css/layui.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/nav.css" />
-		<link rel="stylesheet" type="text/css" href="./js/swiper-bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 		<link rel="stylesheet" type="text/css" href="./css/banner.css" />
 		<link rel="stylesheet" type="text/css" href="./css/content.css" />
@@ -27,7 +27,28 @@
 				<div class="nav-list">
 					<button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
 					<ul class="layui-nav" lay-filter="">
-						<li class="layui-nav-item"><a href="#products">公司产品</a></li>
+						<li class="layui-nav-item showTwoNav">
+							<a href="#products">公司产品</a>
+							<div class="twoNav">
+								<div class="twoNav1">
+									<div class="twoNavTitle">
+										财务系统
+									</div>
+									<ul style="line-height: 40px;">
+										<li><a target="_blank" href="http://www.hubushangshu.com/"><img src="img/nav-icon4.png" > 户部尚书</a><p>销售加新一代移动云电销,通话成本节约50%</p></li>
+										<li><a target="_blank" href="http://www.hubushilang.com/"><img src="img/nav-icon4.png" > 户部侍郎</a><p>销售加新一代移动云电销,通话成本节约50%</p></li>
+									</ul>
+								</div>
+								<div class="twoNav2">
+									<div class="twoNavTitle">
+										云通信平台
+									</div>
+									<ul style="line-height: 40px;">
+										<li><a target="_blank" href="http://www.hubushilang.com/"><img src="img/nav-icon4.png" > 侍郎外呼</a><p>销售加新一代移动云电销,通话成本节约50%</p></li>
+									</ul>
+								</div>
+							</div>
+						</li>
 						<li class="layui-nav-item"><a href="#system">智能系统</a></li>
 						<li class="layui-nav-item"><a href="#case">成功案例</a></li>
 						<li class="layui-nav-item"><a href="#news">最新动态</a></li>
@@ -59,12 +80,16 @@
 				<i class="wow animated fadeInLeft alli pro1">准备好开始使用了吗？</i>
 				<i class="pro2">马上开启，使用人工智能记账</i>
 			</div>
-			<div class="wow animated fadeInLeft proImg1">
-				<img src="img/QQ图片20200803174906.png" />
-			</div>
-			<div class="wow animated fadeInRight proImg2">
-				<img src="img/QQ图片20200803174948.png" />
-			</div>
+			<a target="_blank" href="http://www.hubushangshu.com/">
+				<div class="wow animated fadeInLeft proImg1">
+					<img src="img/QQ图片20200803174906.png" />
+				</div>
+			</a>
+			<a target="_blank" href="http://www.hubushilang.com/">
+				<div class="wow animated fadeInRight proImg2">
+					<img src="img/QQ图片20200803174948.png" />
+				</div>
+			</a>
 		</div>
 		<!-- 智能服务系统 -->
 		<div class=" system" id="system">
@@ -324,11 +349,12 @@
 				</div>
 			</div>
 			<div class="beian">
-				<div class="beianjuzhong">© 2019-2020 贵州尚书数据科技有限公司 版权所有 | <img src="img/下载.png" > 黔ICP备19013117号</div>
+				<div class="beianjuzhong">© 2020-2021 贵州尚书数据科技有限公司 版权所有 | <img src="img/下载.png" >贵公网安备 52010202002170号</div>
 			</div>
 		</div>
 		
-		<script src="./js/layui.js"></script>
+		<script src="js/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
 		<!-- 响应式导航栏 -->
 		<script>
 			//一般直接写在一个js文件中
@@ -436,46 +462,6 @@
 			
 				$("#titleC"+qiehuanId).addClass("animated fadeInLeft ");
 			}
-			// new Vue({
-			// 	el:"#news",
-			// 	data(): {
-			// 		return{
-			// 			newsList:[
-			// 				{
-			// 					name:'最新政策',
-			// 					imgUrl:'
-			// 					child: [
-			// 						{ title: '项目一', child: 'list1' },
-			// 						{ title: '项目二', child: 'list2' },
-			// 						{ title: '项目三', child: 'list3' },
-			// 						{ title: '项目四' },
-			// 						{ title: '项目五' }
-			// 					]
-			// 				},
-			// 				{
-			// 					name:'实务实操',
-			// 					child: [
-			// 						{ title: '项目一', child: 'list1' },
-			// 						{ title: '项目二', child: 'list2' },
-			// 						{ title: '项目三', child: 'list3' },
-			// 						{ title: '项目四' },
-			// 						{ title: '项目五' }
-			// 					]
-			// 				},
-			// 				{
-			// 					name:'产品形态',
-			// 					child: [
-			// 						{ title: '项目一', child: 'list1' },
-			// 						{ title: '项目二', child: 'list2' },
-			// 						{ title: '项目三', child: 'list3' },
-			// 						{ title: '项目四' },
-			// 						{ title: '项目五' }
-			// 					]
-			// 				}
-			// 			]
-			// 		}
-			// 	}
-			// })
 		</script>
 	</body>
 </html>
