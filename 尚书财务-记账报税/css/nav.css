@@ -1,0 +1,180 @@
+.nav {
+	width: 100%;
+	height: 80px;
+	box-shadow: 0 3px 3px 0 #CCC;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	transition: 0.3s;
+}
+.nav.index {
+	/* background: rgba(255, 255, 255 ,0.8); */
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.05);
+}
+.nav.scroll {
+	/* background: #FFF; */
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.05);
+	transition: 0.3s
+}
+.nav .containerok {
+	position: relative;
+	transition: all 400ms ease-out;
+}
+.nav .nav-logo {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	line-height: 80px;
+}
+.nav .nav-list {
+	display: inline-block;
+	height: 80px;
+}
+.nav .nav-list button {
+	width: 25px;
+	height: 30px;
+	position: absolute;
+	top: 30px;
+	right: 15px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.nav .nav-list button span {
+	display: block;
+	width: 25px;
+	height: 2px;
+	background: #FFFFFF;
+	margin-bottom: 6px;
+	transition: 0.5s;
+}
+.nav .nav-list button span.spa1 {
+	transform: rotate(45deg);
+}
+.nav .nav-list button span.spa3 {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+.nav .layui-nav {
+	width: 100%;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	color: #ffffff;
+	background: transparent;
+}
+.nav .layui-nav .layui-nav-item {
+	display: block;
+	line-height: 60px;
+}
+.nav .layui-nav * {
+	font-size: 18px;
+}
+.nav .layui-nav .layui-nav-item a {
+	padding: 0 0;
+	color: #ffffff;
+}
+.nav .layui-nav-bar, .nav .layui-nav .layui-this::after {
+	height: 3px;
+	background-color: #0000ff;
+}
+.nav .layui-nav-item a:hover {
+	color: #0000ff;
+}
+.logoimg {
+	width: 75%;
+}
+@media (max-width:1299px) {    /* 屏幕小于413px时缩小logo */
+	.nav {
+		overflow: hidden;
+		background-color: rgba(55,135,255, 0.8);
+	}
+	.twoNav {
+		font-size: 12px;
+		padding-left: 20px;
+	}
+	.twoNavTitle {
+		display: none;
+	}
+	.twoNav p {
+		display: none;
+	}
+}
+@media screen and (min-width: 1300px) {
+	.nav {
+		max-height: 80px;
+	}
+	.nav.index {
+		
+	}
+	.nav .containerok {
+		width: 1300px;
+		margin: auto;
+	}
+	.nav .nav-list button {
+		display: none;
+	}
+	.nav .layui-nav {
+		width: auto;
+		position: absolute;
+		top: 0;
+		padding: 0 5px;
+		border-radius: 0;
+		margin: 0;
+	}
+	.nav .layui-nav .layui-nav-item {
+		display: inline-block;
+		margin: 0 53px;
+		line-height: 80px;
+	}
+	.showTwoNav {
+		position: relative;
+	}
+	.twoNav {
+		min-width: 400px;
+		min-height: 120px;
+		position: absolute;
+		z-index: 999;
+		background-color: rgba(55,135,255, 0.6);
+		color: #000000;
+		border-radius: 5px;
+		box-shadow: 3px 3px 5px 3px #9F9F9F;
+		display: none;
+		top: 80px;
+		left: -184px;
+		padding: 0 10px 10px 10px;
+	}
+	.showTwoNav:hover .twoNav {
+		display: block;
+	}
+	.twoNav::before {
+		content: "";
+		width: 0px;
+		height: 0px;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid rgba(0, 0, 255, 1);
+		position: absolute;
+		top: -10px;
+		left: 50%;
+	}
+	.twoNavTitle {
+		color: #E2E2E2;
+		font-size: 15px !important;
+		height: 60px;
+		border-bottom: 1px #B2B2B2 solid;
+	}
+	.twoNav1,.twoNav2 {
+		width: 47%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 1% 0 1%;
+	}
+	.twoNav p {
+		font-size: 12px !important;
+		color: #E2E2E2; 
+		line-height: 20px;
+	}
+}
