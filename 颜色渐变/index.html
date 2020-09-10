@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.now {
+				width: 100%;
+				min-height: 200px;
+				/* 
+				background: linear-gradient(red, #9dc66b);         默认从上到下渐变  
+				background: linear-gradient(to right, red, #9dc66b);      to left为渐变方向（to left从左到右、to right从右到左、top left从左上到右下） 
+				background: linear-gradient(to left top, #9dc66b, #4fa49a, red);      可设置多个颜色，to left top为对角渐变 
+				background: linear-gradient(45deg, #9dc66b, #4fa49a, red);       45deg为渐变角度 
+				background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));      使用rgba来设置透明度渐变，rgba最后一个参数为透明度，0为透明1为不透明
+				*/
+			    background: linear-gradient(to left, 
+			          lime 25%, red 25%, red 50%, cyan 50%, cyan 75%, yellow 75% ); 
+			       background: linear-gradient(to left, 
+			          lime 25%, red 25% 50%, cyan 50% 75%, yellow 75% );   /* 色带，不逐渐过渡，50%为颜色停止点 */
+				text-align: center;
+			}
+			.ok {
+				width: 200px;
+				height: 200px;
+				background: 
+					radial-gradient(circle at 50% 0,
+					rgba(255,0,0,.5),
+					rgba(255,0,0,0) 70.71%),
+					radial-gradient(circle at 6.7% 75%,
+					rgba(0,0,255,.5),
+					rgba(0,0,255,0) 70.71%),
+					radial-gradient(circle at 93.3% 75%,
+					rgba(0,255,0,.5),
+					rgba(0,255,0,0) 70.71%) beige;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 200px;
+			}
+			.no {
+				background:
+				      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+				      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+				      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="now">
+			ok
+		</div>
+		<div class="ok">
+			这是渐变
+		</div>
+		<div class="no">
+			这是渐变
+		</div>
+	</body>
+</html>

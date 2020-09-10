@@ -1,0 +1,172 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.box {
+	position: relative;
+	width: 100%;
+	height: 6rem;
+	text-align: center;
+	color: #fff;
+	background: url(../img/1.png) no-repeat fixed center;
+	background-size: cover;
+}
+.box h2 {
+	position: absolute;
+	font-size: 0.9rem;
+	top: 18%;
+	left: 50%;
+	transform: translate(-50%,-80%);
+	line-height: 1em;
+	letter-spacing: 0.05rem;
+}
+.box h4 {
+	position: absolute;
+	font-size: 0.4rem;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-95%);
+	font-weight: lighter;
+}
+.box input {
+	background:none;  
+	outline:none;  
+	border:none;
+	
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	background-color: #00BFFF;
+	color: white;
+	width: 4rem;
+	height: 1.2rem;
+	text-align: 1.2rem;
+	font-size: 0.4rem;
+	letter-spacing: 0.05rem;
+	
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.null {
+	width: 100%;
+	height: 1.2rem;
+	background-color: whitesmoke;
+}
+
+.how,.what,.promoters {
+	position: relative;
+	width: 85%;
+	height: 4rem;
+	margin: auto;
+	display: flex;
+	padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+	/* -webkit-border-radius: 0.1rem;
+	border-radius: 0.1rem; */
+}
+.how {
+	margin-top: 0.7rem;
+}
+.what {
+	margin-top: 0.7rem;
+}
+.promoters {
+	margin-top: 0.7rem;
+}
+.how::before,.what:before,.promoters:before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	bottom: -50%;
+	left: -50%;
+	right: -50%;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	border: 1px slategray solid;
+	
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.contentImg {
+	flex: 2;
+	overflow: hidden;
+	padding-top: 0.3rem;
+}
+.contentImg img {
+	width: 100%;
+	height: auto;
+}
+.contentImg .imgTop {
+	padding-top: 0.6rem;
+}
+.contentTitle {
+	flex: 5;
+	overflow: hidden;
+	padding-left: 0.5rem;
+}
+.contentTitle h2 {
+	font-size: 0.62rem;
+	color: #00BFFF;
+	line-height: 1em;
+}
+.contentTitle h5 {
+	font-size: 0.32rem;
+	color: #000000;
+	line-height: 1em;
+	font-weight: inherit;
+}
+.contentTitle h4 {
+	font-size: 0.36rem;
+	color: #808090;
+	line-height: 1.4em;
+	font-weight: lighter;
+}
+
+.record{
+	position: relative;
+	top: 1.5rem;
+	width: 92%;
+	max-height: 5rem;
+	margin: 0 auto;
+}
+.record h2 {
+	color: #00BFFF;
+}
+.recordContent {
+	position: relative;
+	background: linear-gradient(to right,	#87CEFA, #87CEEB);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 0.5rem;
+}
+
+table {
+	color: #000000;
+}
+/*设置 tbody高度大于400px时 出现滚动条*/
+table tbody {
+	display: block;
+	max-height: 3.5rem;
+	overflow-y: scroll;
+}
+
+table thead, tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+/*滚动条默认宽度是16px 将thead的宽度减16px*/
+table thead {
+	width: calc( 100% - 1em);
+}
+.tableTop {
+	padding: 0.4rem 0.1rem 0.4rem 0.1rem;
+}
+.tableTd{
+	padding-top: 0.3rem;
+}
+.tableTd2 {
+	text-align: center;
+	padding-bottom: 0.5rem;
+	color: #808090;
+}

@@ -1,0 +1,28 @@
+.swiper-container{
+  width: 100%;
+  min-height: 100px;
+  max-height: 656px;
+  margin-top: 80px;
+}
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width:675px){    /* 屏幕小于676px时隐藏圆点和按钮 */
+	/*修改小圆点的样式*/
+	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	  
+	}
+}
+
+@media screen and (min-width:676px){
+	/*修改小圆点的样式*/
+	.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	  width: 0.75rem;   
+	  height: 0.75rem;
+	  border-radius: 50%;
+	  background-color: rgba(255, 255, 255, 1);
+	  border: 1px solid #000000;
+	}
+}

@@ -1,0 +1,65 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: whitesmoke;
+}
+.topImg {
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.topImg img {
+	height: auto;
+	width: 100%;
+}
+
+.price, .explain, .flow {
+	width: 100%;
+	background-color: #FFFFFF;
+	padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+	box-sizing: border-box;
+}
+.price {
+	color: red;
+	font-size: 0.4rem;
+	font-weight: bold;
+	min-height: 2rem;
+	
+	-webkit-border-bottom-left-radius: 0.4rem;
+	-webkit-border-bottom-right-radius: 0.4rem;
+	border-bottom-left-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+}
+.price i {
+	font-size: 0.6rem;
+	display: inline;
+	font-style: normal;
+}
+.price h3 {
+	font-size: 0.5rem;
+	color: #000000;
+	line-height: 1em;
+}
+
+.explain, .flow {
+	margin-top: 0.3rem;
+	font-size: 0.33rem;
+	
+	-webkit-border-radius: 0.4rem;
+	-webkit-border-radius: 0.4rem;
+	border-radius: 0.4rem;
+	border-radius: 0.4rem;
+}
+.explain {
+	min-height: 1rem;
+}
+.flow {
+	min-height: 2rem;
+	margin-bottom: 0.5rem;
+}
+p {
+	text-indent: 2em;
+}

@@ -1,0 +1,92 @@
+function to(){
+	alert("触发");
+}
+
+const app = new Vue({
+	el:'#app',
+	data:{
+		items:[
+			{
+				'name':'王二',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'张三',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'李四',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'马五',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'黄六',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小花',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小红',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小刘',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小李',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小张',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小王',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+			{
+				'name':'小黄',
+				'time':'2020-9-3',
+				'jifen':'120',
+				'status':'1'
+			},
+		],
+		itemOfNull:false,
+	},
+	methods:{
+		
+	},
+	mounted() {
+		if (this.items.length!=0) {
+			this.itemOfNull = true;
+		}
+	}
+})
