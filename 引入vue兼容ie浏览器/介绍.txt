@@ -1,0 +1,9 @@
+IE不支持ES6的原因导致：
+引入browser.js，就能在ie中使用ES2015；
+引入polyfill.js，就能支持type="text/babel"；
+在引入自己编写使用vue语法的js文件时，使用type="text/babel"即可。
+
+如：
+<script src="./js/browser.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./js/polyfill.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/information.js" type="text/babel" charset="utf-8"></script>		
