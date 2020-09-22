@@ -1,0 +1,13 @@
+冒泡：冒泡如🐟吐泡，气泡越来越大，触发的顺序是由事件触发处-->DOM树的最上层。
+
+捕获：捕获如👮‍抓坏人，范围越来越小，触发的顺序是由事件触发处-->DOM树的最下层。
+
+阻止冒泡：
+        document.getElementById("button").addEventListener("click",function(event){
+            event.stopPropagation();    
+        },false);       // 在id为button处阻止事件的冒泡，不会执行id为button的DOM树上层的事件
+
+阻止捕获：
+        document.getElementById("second").addEventListener("click",function(){
+            event.stopImmediatePropagation();      // event.stopPropagation(); 也行
+        },true);     // 在id为second处阻止事件的捕获，不会执行id为button的DOM树下层的事件
