@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,3];
+			// 1.concat();   拼接数组
+			var arr1 = [4];
+			var arrConcat = arr.concat(arr1);
+			console.log(arrConcat);   // [1,2,3,4]
+			
+			// 2.join();   数组元素放入字符串中，通过指定分隔符分隔
+			var arrJoin = arr.join(",");
+			console.log(arrJoin);   // 1,2,3
+			
+			// 3.pop();   删除并返回数组最后一个元素
+			var arrPop = arr.pop();
+			console.log(arrPop);  // 3 
+			console.log(arr);    // [1,2]
+			
+			// 4.push();   添加元素（数组尾），返回新的长度
+			var arrPush = arr.push(4,5);
+			console.log(arrPush);   // 4
+			console.log(arr);   // [1,2,4,5]
+			
+			// 5.shift();    删除并返回数组第一个元素
+			var arrShift = arr.shift();
+			console.log(arrShift);   // 1
+			console.log(arr);    // [2,4,5]
+			
+			// 6.unshift();   添加元素（数组首），返回新的长度
+			var arrUnshift = arr.unshift(3,1); 
+			console.log(arrUnshift);   // 5
+			console.log(arr);   // [3,1,2,4,5]
+			
+			// 7.slice();    返回数组中选定元素   可切割数组 arr.slice(1,4);
+			var arrSlice = arr.slice(4);
+			console.log(arrSlice);   //[5]
+			
+			// 8.sort();     排序
+			var arrSort = arr.sort();
+			console.log(arrSort);    // [1,2,3,4,5]
+			
+			// 9.reverse();   颠倒元素顺序
+			var arrReverse = arr.reverse();
+			console.log(arrReverse);   // [5,4,3,2,1]
+			
+			// 10.splice();   添加、删除数组元素，返回被删除的元素
+			var arrSplice = arr.splice(3,2,0,1,2);    //第一个参数为删除下标，第二个参数为删除长度，后面参数可有可无向原数组添加数据
+			console.log(arrSplice);    // [2,1]
+			console.log(arr);   // [5,4,3,0,1,2]
+		</script>
+	</body>
+</html>

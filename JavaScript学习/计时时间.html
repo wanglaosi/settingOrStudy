@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计时事件</title>
+	</head>
+	<body>
+		<!-- 1.setInterval() - 间隔指定的毫秒数不停地执行指定的代码。 -->
+		
+		<!-- 2.setTimeout() - 在指定的毫秒数后执行指定代码。 -->
+		
+		<!-- 3.clearInterval() - 停止 setInterval() 方法执行的函数代码。 -->
+		
+		<!-- 4.clearTimeout() - 停止 clearTimeout() 方法执行的函数代码。 -->
+		<p>例1：显示跳动的时间</p>
+		<p id="demo"></p>
+		<button onclick="stop()">停止</button>
+		<script type="text/javascript">
+			// setInterval和setTimeout区别
+			setInterval(function() {
+				console.log('每间隔3秒打印一次（setInterval）');
+			},3000)
+			setTimeout(function() {
+				console.log('1秒后打印，只执行一次（setTimeout）');
+			},1000)
+			
+			// 例1
+			var time = setInterval(function(){ myTime(); },1000)
+			function myTime() {
+				var d = new Date();
+				var t = d.toLocaleTimeString();
+				document.getElementById('demo').innerText = t;
+			}
+			function stop() {
+				clearInterval(time);
+			}
+		</script>
+	</body>
+</html>

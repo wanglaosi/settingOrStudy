@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			// 日期对象，是系统提供好的
+			
+			var date = new Date();
+			
+			// 获取年份
+			var year = date.getFullYear();  
+			// 获取月份，需要加1
+			var month = date.getMonth() + 1;  
+			// 获取日  
+			var day = date.getDate();  
+			
+			// 获取时
+			var hours = date.getHours();  
+			// 获取分
+			var minutes = date.getMinutes();
+			// 获取秒
+			var seconds = date.getSeconds();
+			
+			// 获取周几
+			var week = date.getDay();
+			switch (week){
+				case 0:
+					week = "日";
+					break;
+				case 1:
+					week = "一";
+					break;
+				case 2:
+					week = "二";
+					break;	
+				case 3:
+					week = "三";
+					break;	
+				case 4:
+					week = "四";
+					break;	
+				case 5:
+					week = "五";
+					break;	
+				case 6:
+					week = "六";
+					break;	
+			}
+			
+			var newTime = year + "-" + ((month<10)?"0"+month:month) + "-" + day + "  " + 
+			              ((hours<10)?"0"+hours:hours) + ":" + ((minutes<10)?"0"+minutes:minutes) + ":" + ((seconds<10)?"0"+seconds:seconds)+ "  " + "星期" + week;
+			console.log(newTime);
+			
+			// 返回 1970 年 1 月 1 日至今的毫秒数
+			var time = date.getTime();
+			// 时间戳(能够验证代码块的执行时间)
+			var firstTime = new Date().getTime();
+			for(var i = 0; i < 100000000; i++) {
+				
+			}
+			var lastTime = new Date().getTime();
+			console.log(lastTime - firstTime);
+			
+			
+		</script>
+	</body>
+</html>

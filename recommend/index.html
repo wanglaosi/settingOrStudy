@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css?v=1"/>		
+		<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/alertPopShow.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="wrap">
+		<div class="container">
+			<h2 style="color: white; margin: 0; text-align: center">越今朝财税</h2>
+			<label><input class="wow name" type="text" placeholder="请输入您的名字"/></label>
+			<label><input class="wow phone" maxlength="15" type="tel" placeholder="请输入您的电话"/></label>
+			<label><input class="wow client_name" type="text" placeholder="请输入客户名字" /></label>
+			<label><input class="wow client_phone" maxlength="15" type="tel" placeholder="请输入客户电话" /></label>
+	 
+			<input class="hi" type="submit" value="提交" onclick="submit()"/>
+			<p class="change_link" style="text-align: center">
+				<span class="text">提交不成功?</span>
+				<a href="#" class="to_login" onclick="showAlert('友情提醒','请在微信群联系越今朝！');"> 联系管理员 </a>
+			</p>
+		</div>
+		<div class="demo"></div>
+	</div>
+	</body>
+</html>
