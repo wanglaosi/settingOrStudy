@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>分页渲染</title>
+	</head>
+	<body>
+		<div class="">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+				<li>23</li>
+				<li>24</li>
+				<li>25</li>
+				<li>26</li>
+				<li>27</li>
+				<li>28</li>
+				<li>29</li>
+				<li>30</li>
+				<li>31</li>
+			</ul>
+			<a href="javascript:;" onclick="pre()" class="pre">上一页</a>
+			<span></span>
+			<a href="javascript:;" onclick="next()" class="next">下一页</a>
+		</div>
+		
+		<script type="text/javascript">
+			// 1. 一共有几条数据,2.每页显示多少条,3.一共有多少页
+			
+			window.onload = function(){
+				var li = document.getElementsByTagName('li');    // 获取li的数量
+				var spanLi = document.getElementsByTagName('span')[0];     // 获取span标签
+				
+				var pageAll = 0;    // 页面总数
+				var pageNow = 0;    // 当前所在页
+				var pageSize = 10;  // 每页显示条数
+				var ps = li.length / pageSize;
+				xianshi(pageNow);
+				if (ps <= 1) {   // 根据数据总数和每页显示数,得到页面总数
+					pageAll = 1;
+				}else {
+					pageAll = Math.ceil(ps);
+				}
+				
+				// 添加页码
+				for(var i = 0; i < pageAll; i++) {
+					var span = document.createElement('span');
+					span.innerText = i + 1;
+					spanLi.appendChild(span);
+				}
+				
+				var yema =  spanLi.getElementsByTagName('span');   // 获得页码
+				for (var j = 0; j < pageAll; j++) {
+					yema[j].ye = j;     // 让第j页的ye属性为j
+					yema[0].style.backgroundColor = 'red';
+					yema[j].onclick = function(){    // 点击换页
+						for(var m = 0; m < pageAll; m++) {
+							yema[m].style.backgroundColor = ''
+						}
+						yema[this.ye].style.backgroundColor = 'red';
+						
+						pageNow = this.ye;
+						
+						xianshi(pageNow);
+					}
+				}
+				
+				function xianshi(pageNow) {   // 显示当前页的数据
+					for(var n = 0; n < li.length; n++){   // 隐藏全部的数据
+						li[n].style.display = "none";
+					}
+					for(var n = (pageNow * pageSize); n < (pageNow + 1) * pageSize; n++) {   // 显示当前页的数据
+						li[n].style.display = "block";
+					}
+				}
+				pre = function(){
+					pageNow <= 0 ? alert('已经是第一页了') : pageNow--;
+					for(var m = 0; m < pageAll; m++) {
+						yema[m].style.backgroundColor = ''
+					}
+					yema[pageNow].style.backgroundColor = 'red';
+					xianshi(pageNow);
+				}
+				next = function(){
+					pageNow == pageAll-1 ? alert('已经是最后一页了') : pageNow++;
+					for(var m = 0; m < pageAll; m++) {
+						yema[m].style.backgroundColor = ''
+					}
+					yema[pageNow].style.backgroundColor = 'red';
+					xianshi(pageNow);
+				}
+			}
+		</script>
+	</body>
+</html>

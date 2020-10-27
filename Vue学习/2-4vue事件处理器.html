@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vue事件处理器</title>
+	<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+	  <!-- 1.@click事件监听 -->
+		  <button v-on:click="greet">Greet</button>
+		  <!-- 
+			  .stop - 阻止冒泡  @click.stop如点击点击其它地方div关闭，给最外面的盒子加上@click='a = !a'，给div加上@click.stop防止冒泡即可
+			  .prevent - 阻止默认事件
+			  .capture - 阻止捕获
+			  .self - 只监听触发该元素的事件
+			  .once - 只触发一次
+			  .left - 左键事件
+			  .right - 右键事件
+			  .middle - 中间滚轮事件 
+		  -->
+	  <!-- 2.@keyup监听键盘事件 -->
+		<br>
+			<input type="text" @keyup.enter="alertAll" />
+			<button @click="alertAll">提交</button>
+			<!-- 
+				.enter
+				.tab
+				.delete (捕获 "删除" 和 "退格" 键)
+				.esc
+				.space
+				.up
+				.down
+				.left
+				.right
+				.ctrl
+				.alt
+				.shift
+				.meta 
+			 -->
+	</div>
+	 
+	<script>
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    name: 'Vue.js'
+	  },
+	  // 在 `methods` 对象中定义方法
+	  methods: {
+	    greet: function (event) {
+	      // `this` 在方法里指当前 Vue 实例
+	      alert('Hello ' + this.name + '!')
+	      // `event` 是原生 DOM 事件
+	      if (event) {
+	          alert(event.target.tagName)
+	      }
+	    },
+		alertAll: function(){
+			alert("触发提交操作");
+		}
+	  }
+	})
+	// 也可以用 JavaScript 直接调用方法
+	app.greet() // -> 'Hello Vue.js!'
+	</script>
+</body>
+</html>

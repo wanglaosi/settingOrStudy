@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>分页渲染</title>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			table {
+				border-collapse:collapse;/*边框合并模式*/
+				text-align:center;
+			}
+			td,th{  /*td是后面tbody中动态创建的单元格，th是thead里面那一行中的单元格*/
+					border:1px solid #333;
+			}
+			table tr {
+				height: 40px;
+				background-color: #cccccc;
+			}
+			span {
+				display: inline-block;
+				width: 20px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.spanNow {
+				color: #F00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="" id="app">
+			<table cellspacing="" cellpadding="">
+				<thead>
+					<tr><th width="40px">编号</th><th width="120px">姓名</th><th width="700px">内容</th><th width="60px">操作</th></tr>
+				</thead>
+				<tbody>
+					<tr v-for="(ar,index) in arr" :key='index'><td>{{ar.id}}</td><td>{{ar.name}}</td><td>{{ar.title}}</td><td><a @click="del(index)">删除</a></td></tr>
+				</tbody>
+			</table>
+			<a href="javascript:;" @click="pre" class="pre">上一页</a>
+			<span v-for="index in pageAll" :class="nowPage == index ?'spanNow':''" @click="goPage(index)">{{index}}</span>
+			<a href="javascript:;" @click="next" class="next">下一页</a>
+		</div>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el: '#app',
+				data: {
+					list: [     // 数据
+						{id:'1', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'2', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'3', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'4', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'5', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'6', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'7', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'8', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'9', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'10', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'11', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'12', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'13', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+					],
+					pageSize: 10,    // 每页数据条数
+					nowPage: 1,   // 当前页数
+					pageAll: 0,   //最大页数
+					arr: [],
+				},
+				created() {
+					this.pageAll = Math.ceil(this.list.length / this.pageSize);
+					
+					if(this.list.length>this.pageSize){
+					 	this.arr = this.list.slice((this.nowPage-1)*this.pageSize,this.nowPage*this.pageSize);    // 切割数组，将当前业的数据单独切割出来
+					}
+				},
+				methods:{
+					pre: function(){
+						this.nowPage <= 1 ? alert("已经是第一页了") : this.nowPage --;
+						this.arr = this.list.slice((this.nowPage-1)*this.pageSize,this.nowPage*this.pageSize);
+					},
+					next: function(){
+						this.nowPage < this.pageAll ? this.nowPage ++ : alert("已经是最后一页了");
+						this.arr = this.list.slice((this.nowPage-1)*this.pageSize,this.nowPage*this.pageSize);
+					},
+					del:function(index){
+						this.arr.splice(index,1);
+					},
+					goPage:function(index){
+						this.nowPage = index;
+						this.arr = this.list.slice((this.nowPage-1)*this.pageSize,this.nowPage*this.pageSize);
+					},
+				}
+			})
+		</script>
+	</body>
+</html>

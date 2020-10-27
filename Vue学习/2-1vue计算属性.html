@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>watch</title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			vue计算属性--computed：
+			<br>
+			<p>原始字符串: {{ message }}</p>
+			<p>计算后反转字符串: {{ reversedMessage }}</p>
+			<p>计算后截取字符串: {{ reversedMessage2 }}</p>
+		</div>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data(){
+					return {
+						message:"wangfu"
+					}
+				},
+				// computed计算属性
+				computed:{
+					reversedMessage: function() {
+						return this.message.split('').reverse().join('');
+					},
+					reversedMessage2: function() {
+						return this.message.split('fu').join('');
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

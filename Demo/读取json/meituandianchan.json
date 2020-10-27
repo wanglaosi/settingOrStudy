@@ -1,0 +1,14 @@
+{
+	"caiAll":[
+		{"name":"全部","number":"2","money":""},
+		{"name":"炒菜","number":"1","money":""},
+		{"name":"凉菜","number":"1","money":""},
+		{"name":"饮料","number":"1","money":""}
+	],
+	"cai":[
+		{"id":"1"},
+		{"id":"2"},
+		{"id":"3"},
+		{"id":"4"}
+	]
+}

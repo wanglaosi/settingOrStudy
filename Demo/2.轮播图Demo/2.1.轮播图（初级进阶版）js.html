@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轮播图（初级进阶版）</title>
+		<style type="text/css">
+			.bigDiv {
+				width: 442px;
+				height: 200px;
+				overflow: hidden;
+				position: relative;
+			}
+			.bigDiv img {
+				display: none;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.preNext {
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				position: absolute;
+				background-color: #1E90FF;
+				text-align: center;
+				line-height: 25px;
+				color: #fff;
+				cursor: pointer;
+			}
+			.pre {
+				left: 2%;
+				top: 50%;
+				transform: translate(-2%,-50%);
+			}
+			.next {
+				right: 2%;
+				top: 50%;
+				transform: translate(-2%,-50%);
+			}
+			/* 分页器 */
+			ul {
+				padding: 0;margin: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 50%;
+				transform: translate(-50%);
+				font-size: 12px;
+				line-height: 15px;
+				text-align: center;
+				color: #F0F8FF;
+			}
+			li {
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: #1E90FF;
+				display: inline-block;
+				cursor: pointer;
+			}
+			.arrList {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bigDiv">
+			<img src="../img/1.png" >
+			<img src="../img/2.png" >
+			<img src="../img/3.png" >
+			<div class="preNext pre" onclick="pre()"><</div>
+			<div class="preNext next" onclick="next()">></div>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			// 只显示第一张图片
+			var obj = document.getElementsByTagName('img');
+			obj[0].style.display = 'block';
+			
+			var i = 0;
+			// 隐藏所有图片
+			function none(){
+				for(var j = 0; j < obj.length; j++) {
+					obj[j].style.display = 'none';
+				}
+			}
+			// 点击切换上一张
+			function pre(){
+				i < 1 ? i = obj.length - 1 : i--;
+				none();
+				obj[i].style.display = 'block';
+			}
+			// 点击切换下一张
+			function next(){
+				i < obj.length - 1 ? i++ : i = 0;
+				none();
+				obj[i].style.display = 'block';
+			}
+			
+			// 获取按钮
+			var toPre = document.getElementsByClassName("pre")[0];
+			var toNext = document.getElementsByClassName("next")[0];
+			// 当鼠标按钮被点击时，关闭计时器
+			toPre.onmousedown = function () {
+				clearInterval(timer);
+			}
+			toNext.onmousedown = function () {
+				clearInterval(timer);
+			}
+			// 当鼠标按钮被释放时，开启计时器自动切换轮播图
+			toPre.onmouseup = function () {
+				interval();
+			}
+			toNext.onmouseup = function () {
+				interval();
+			}
+			
+			// 计时器函数，2秒切图
+			var timer;   // 定时器变量
+			function interval(){
+				timer = setInterval(function(){
+					next();
+				},2000);
+			}
+			interval();
+			
+			// 分页器
+			
+		</script>
+	</body>
+</html>

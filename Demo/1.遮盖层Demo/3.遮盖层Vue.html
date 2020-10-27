@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>遮盖层</title>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.button {
+				display: block;
+				width: 130px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #1E90FF;
+				border: #1E90FF 1px solid;
+				box-sizing: border-box;
+				border-radius: 5px;
+			}
+			.button:hover {
+				color: aliceblue;
+				background-color: dodgerblue;
+				border: 0;
+			}
+			a {
+				text-decoration: dashed;
+			}
+			
+			.showOrHide {
+				z-index: 999;
+				
+				height: 100%;
+				width: 100%;
+				position: fixed;
+				top: 0;left: 0;
+				background-color: rgba(0,0,0, 0.5);
+			}
+			.showMianban {
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate(-50%,-50%);
+				width: 300px;
+				height: 200px;
+				background-color: white;
+			}
+			.hidden {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				cursor: pointer;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="index">      <!-- 内容 -->
+				<ul>
+					<li><a href="#" class="button" @click="isShow=!isShow" >显示遮盖层</a></li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li><li>这是内容</li>
+				</ul>
+			</div>
+			
+			<div class="showOrHide" v-show="isShow">   <!-- 遮盖层 -->
+				<div class="showMianban">
+					<div class="hidden" @click="isShow=!isShow">
+						关闭
+					</div>
+					这是遮盖层内容
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el:'#app',
+				data:{
+					isShow: false,
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>

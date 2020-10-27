@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=640, user-scalable=no">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-title" content="">
+		<title>户部尚书--一站式企业服务平台</title>
+		<link href="./css/index.css" rel="stylesheet" />
+		<script src="./js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<div class="page_box" id="app">
+			<div class="page page1">
+				<div>
+					<div class="big">
+						<div class="sma">
+							<div class="img">
+								<img src="./img/5f559ccc4fc92d33c111de39.jpg">
+							</div>
+						</div>
+					</div>
+					<div class="who">
+						<h4>欢迎您</h4>
+						<p>尚书财税 · 竭诚为您服务</p>
+					</div>
+					<div class="why">
+						<p>愿您的公司在我们的陪伴下日升月恒</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="page page2 hide">
+				<div class="aaa" style="z-index: -999;">
+					<div class="imgName">
+						<div class="imgContent">
+							<img src="./img/5f559ccc4fc92d33c111de39.jpg">
+						</div>
+						<div class="nameContent">
+							{{name}}
+							<p>邀你使用户部尚书</p>
+						</div>
+					</div>
+					<div class="imgName imgName2">
+						<div class="imgContent1">
+							<img src="./img/xianxiashanghutuiguangruzhu.png">
+						</div>
+						<div class="nameContent1">
+							<p>注册公司<em style="font-style:normal;font-size: 0.55rem;color: #007AFF;"> 免费</em></p>
+						</div>
+					</div>
+					<div class="imgName">
+						<div class="imgContent1">
+							<img src="./img/wodetuiguangshang.png">
+						</div>
+						<div class="nameContent1">
+							<p>小规模纳税人<em style="font-style:normal;font-size: 0.65rem;color: yellowgreen;"> 1680 </em>元/年</p>
+						</div>
+					</div>
+					<div class="imgName">
+						<div class="imgContent1">
+							<img src="./img/wodeshanghu.png">
+						</div>
+						<div class="nameContent1">
+							<p>一般纳税人<em style="font-style:normal;font-size: 0.65rem;color: deepskyblue;"> 3880 </em>元/年</p>
+						</div>
+					</div>
+					<div class="imgName">
+						<div class="imgContent1">
+							<img src="./img/dailizhinan.png">
+						</div>
+						<div class="nameContent1">
+							<p>商标申请<em style="font-style:normal;font-size: 0.65rem;color: #EC971F;"> 660 </em>元/类</p>
+						</div>
+					</div>
+					<div class="row"></div>
+				</div>
+			</div>
+
+			<div class="page page3 hide" @click="flag=false">
+				<div>
+					<div class="logo">
+						<img src="./img/5f559ccc4fc92d33c111de39.jpg">
+					</div>
+					<div class="input">
+						姓名：<input type="text" class="inputtop" placeholder="请输入您的姓名" v-model="userName" />
+						<br>
+						电话：<input type="tel" class="inputtop" maxlength="11" placeholder="请输入您的电话号码" v-model="userPhone" />
+						<br>
+						业务：<select id="change" class="minimal">
+							<option value="没有选择">请选择意向业务</option>
+							<option value="记账报税">记账报税</option>
+							<option value="公司变更">公司变更</option>
+							<option value="资质代办">资质代办</option>
+							<option value="知识产权">知识产权</option>
+							<option value="公司注销">公司注销</option>
+							<option value="其他服务">其他服务</option>
+						</select>
+					</div>
+					<div class="ok" @click="isOk()">
+						确 定
+					</div>
+					<div class="demo"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="arrow"><img src="./img/尖角号上.png"></div>
+
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+		<script src="./js/alertPopShow.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

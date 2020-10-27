@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>div盒子跟随鼠标</title>
+		<style type="text/css">
+			.witeDiv {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: #1E90FF;
+				line-height: 200px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="witeDiv">
+			div盒子跟随鼠标
+		</div>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var witeDiv = document.getElementsByClassName('witeDiv')[0];
+				
+				document.onmousemove = function(event) {
+					// 解决兼容性问题
+					event = event || window.event;
+					var st = document.body.scrollTop || document.documentElement.scrollTop;     // scrollTop
+					var sl = document.body.scrollLeft || document.documentElement.scrollLeft;     // scrollLeft
+					
+					var left = event.clientX;     // clientX
+					var top = event.clientY;     // clientY
+	 
+					witeDiv.style.left = left + sl +  "px";     // 
+					witeDiv.style.top = top +  st +"px";     // 
+				}
+			}
+		</script>
+	</body>
+</html>

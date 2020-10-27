@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数防抖</title>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 函数节流和防抖都是利用了setTimeout延迟执行的特性，对函数调用过程进行一定的处理。函数节流可以让高频调用的函数降低执行频率；而函数防抖则可以在事件连续触发时，先不执行操作，只有一定时间内没有再次触发时才去执行相关操作。
+				 我们将相关操作放在一个超时调用里，如果在该调用生效之前就发生了下一次调用，我们就取消该次调用，将新的调用添加到任务队列中等待触发。 
+		-->
+		<input type="text" id="input" value="" />
+		<span id="err"></span>
+		
+		<script type="text/javascript">
+			function isNumber( number ) {
+				//正则验证
+				var reg=/^[0-9]*$/;  
+				return reg.test(number);
+			}
+			//函数防抖（超时调用，在本次调用结束前开始下一次调用，则停止本次调用，执行下一次调用）
+			var timer;
+			$('#input').on('input', function() {
+				//清除上次添加但未执行的setTimeout任务
+				clearInterval(timer);
+				//用户在连续输入时清除可能存在的格式错误提示
+				$('#err').text('');
+				//重置setTimeout任务
+				timer = setTimeout(function() {
+					//如果输入的不是数字，就给出错误提示
+					if( !isNumber( $('#input').val() ) ){
+						$("#err").text("只能输入数字！");
+					} else {
+						$("#err").text("");
+					}
+				}, 2000);
+			})
+		</script>
+	</body>
+</html>

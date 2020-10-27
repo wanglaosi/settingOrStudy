@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>生命周期</title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{message}}</h1>
+			<h3>到created时，data初始化完毕，dom树并未挂载，能发送请求获取数据操作</h3>
+			<h3>到mounted时，dom挂载完毕，能对dom节点进行操作</h3>
+			
+			<h3>{{messageUpdate}}</h3>
+		</div>
+		
+		<script type="text/jscript">
+			const app = new Vue({
+				el:'#app',
+				data:{
+					message:'Vue的生命周期',
+					messageUpdate:'这是测试',
+				},
+				// 创建前
+				beforeCreate: function(){     
+					console.group('-------beforeCreate创建前状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->undefined
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->undefined
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->undefined   
+				},
+				// 创建完成
+				created: function(){   
+					console.group('-------created创建完毕状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->undefined
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				},
+				//挂载前
+				beforeMount: function(){    
+					console.group('-------beforeMount挂载前状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				},
+				//挂载完成
+				mounted: function(){    
+					console.group('-------mounted挂载结束状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化 
+					  
+					this.messageUpdate = "测试update更新";
+					console.log('--- 在mounted中更改数据，触发beforeUpdate和updated ---');
+				},
+				//更新前
+				beforeUpdate: function(){  
+					console.group('-------beforeUpdate更新前状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				},
+				//更新完成
+				updated: function(){   
+					console.group('-------updated更新完成状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				},
+				//销毁前
+				beforeDestroy: function(){  
+					console.group('-------beforeDestroy销毁前状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				},
+				//销毁完成
+				destroyed: function(){
+					console.group('-------destoryed销毁完成状态-------');
+					console.log('%c%s', "color:red", "el        :" + this.$el);   //-->已被初始化
+					console.log(this.$el)
+					console.log('%c%s', "color:red", "data      :" + this.$data);   //-->已被初始化
+					console.log('%c%s', "color:red", "message   :" + this.message);   //-->已被初始化   
+				}
+			})
+		</script>
+	</body>
+</html>

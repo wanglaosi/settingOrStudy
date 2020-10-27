@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格数据渲染</title>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			table {
+				border-collapse:collapse;/*边框合并模式*/
+				text-align:center;
+			}
+			td,th{  /*td是后面tbody中动态创建的单元格，th是thead里面那一行中的单元格*/
+					border:1px solid #333;
+			}
+			table tr {
+				height: 40px;
+				background-color: #cccccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="" id="app">
+			<table cellspacing="" cellpadding="">
+				<thead>
+					<tr><th width="40px">序号</th><th width="70px">学号</th><th width="120px">姓名</th><th width="700px">内容</th><th width="60px">操作</th></tr>
+				</thead>
+				<tbody>
+					<tr v-for="(list,index) in lists" :key='index'>
+						<td>{{index+1}}</td>
+						<td>{{list.id}}</td>
+						<td>{{list.name}}</td>
+						<td>{{list.title}}</td>
+						<td><a href="javascript:;" @click="del(index)">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="text" v-model="id" /> <input type="text" v-model="name" /><input type="text" v-model="title" /> <a href="javascript:;" @click="add">添加</a>
+		</div>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el:'#app',
+				data:{
+					lists: [     // 数据
+						{id:'101001', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'221391', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'312323', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'434343', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'512344', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'621344', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+						{id:'712342', name:'JavaScript入门视频教程', title:'您快速认识JavaScript,熟悉基本语法、窗口交互方法和通过DOM进行网页元素的操作,学会如何编写JS代码,如何运用JavaScript去操作HTML元素和CSS..'},
+					],
+					id:'',
+					name:'',
+					title:''
+				},
+				methods:{
+					del:function(index) {
+						this.lists.splice(index,1);     // splice删除数组，index是删除的下标，1是长度
+					},
+					add:function() {
+						var obj = {
+							id:this.id,
+							name:this.name,
+							title:this.title,
+						};
+						this.lists.push(obj);
+						console.log(this.lists);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

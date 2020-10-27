@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>读取json文件</title>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="name">
+			
+		</div>
+		<script type="text/javascript">
+			$(function () {   
+				$.ajax({
+					url: 'new_file.json',
+					type: 'get',
+					success: function (res) {
+            console.log(res);
+						document.getElementsByClassName('name')[0].innerText = res.pro[0].name;
+					  $('.name').text(res.pro[0].name);
+          },
+					err: function(err) {
+						console.log(err);
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

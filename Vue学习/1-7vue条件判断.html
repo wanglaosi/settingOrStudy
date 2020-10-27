@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			指令：
+			<br>
+			v-if...v-else-if...v-else...条件判断（必须紧挨使用）
+			<div v-if="type === 'A'">
+			      A
+			    </div>
+			    <div v-else-if="type === 'B'">
+			      B
+			    </div>
+			    <div v-else-if="type === 'C'">
+			      C
+			    </div>
+			    <div v-else>
+			      Not A/B/C
+			    </div>
+			</div>
+			<hr >
+			v-show可做元素显隐判断
+			<h1 v-show="ok">Hello!</h1>
+		</div>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data(){
+					return {
+						type: 'C',
+						ok:true
+					}
+				},
+				// methods方法
+				methods:{
+					
+				},
+			})
+		</script>
+	</body>
+</html>

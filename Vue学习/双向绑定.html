@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 输入框中输入,oninput在用户输入时触发，它是在元素值发生变化时立即触发,实时触发;onchange在用户输入过程中不会触发，失去焦点时才会触发 -->
+		<input type="text" oninput="changeData(this.value)"/>
+		<!-- demo盒子中显示 -->
+		<div id="dome"></div>
+		<script type="text/javascript">
+			/* 双向绑定原理 */
+			var Book = {};
+			var bookName = "";
+			
+			//属性是存储在特定命名位置的值，是对象的内容，属性并不直接存储在对象容器内部。属性有两种类型:数据属性和访问器属性。属性具备了属性描述符，用来描述属性拥有的特性。
+			//属性描述符用来描述属性特性的(只有在内部才能用的特性),配置属性是否可读，是否可写，是否可枚举，值是多少，读写。
+			//Object.defineProperty(obj,prop,descripor)   obj是要在其上定义属性的对象，prop是将被定义和修改的属性，descripor是将被定义和修改的熟悉描述符
+			Object.defineProperty(Book,'bookName',{
+				set:function(value) {   //set设置属性
+					bookName = value;
+					console.log("set设置属性，设置书名为：" + value);
+				},
+				get:function() {   //get获取属性
+					console.log("监听到在访问对象的属性，get方法被调用了");
+					return '《' + bookName + '》';
+				}
+			});
+			Book.bookName = "活着";    //设置属性，调用set方法
+			console.log("访问对象的属性（get）：" + Book.bookName);   //访问对象的属性，调用get方法
+			
+			
+			/* 练习 */
+			var Person = {};
+			var name = "";
+			
+			Object.defineProperty(Person,"name",{
+				set:function(setName) {
+					name = setName;
+					console.log("set设置属性，设置姓名为：" + setName);
+				},
+				get:function() {
+					console.log("监听到你要读取对象的属性，get方法被调用了");
+					return "I Love " + name;
+				}
+			})
+			Person.name = "马华";
+			console.log("读取对象的属性（get）:" + Person.name);
+			
+			/* 输入框的双向绑定 */
+			var obj = {};
+			var dome = document.getElementById("dome");
+			function changeData(value) {
+				obj.val = value;
+			}
+			Object.defineProperty(obj,"val",{
+				set:function(newValue) {
+					dome.innerHTML = newValue;
+				},
+				get:function() {
+					return val;
+				}
+			});
+		</script>
+	</body>
+</html>

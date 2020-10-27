@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>输入框</title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>input：</p>
+			<input type="text" v-model="thisInput" style="width: 300px;" /> <div id="isIn">{{thisInput}}</div>
+			<p>textarea：</p>
+			<textarea style="width: 300px;height: 80px;" v-model="thisTextarea"></textarea><div id="isTe">{{thisTextarea}}</div>
+		</div>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el:"#app",
+				data:{
+					thisInput:'演示input使用 v-model 实现双向数据绑定：',
+					thisTextarea:'演示textarea 元素中使用 v-model 实现双向数据绑定：'
+				},
+				watch: {
+					thisInput: function(val){
+						
+					},
+					thisTextarea: function(val){
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

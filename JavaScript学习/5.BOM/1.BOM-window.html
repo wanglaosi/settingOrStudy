@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BOM - window</title>
+	</head>
+	<body>
+		<h3>浏览器对象模型（Browser Object Model (BOM)）允许 JavaScript 与浏览器对话。</h3>
+
+		<h4>Window 对象</h4>
+		<ul>
+			<li>所有浏览器都支持 window 对象。它代表浏览器的窗口。</li>
+			<li>所有全局 JavaScript 对象，函数和变量自动成为 window 对象的成员。</li>
+			<li>全局变量是 window 对象的属性。</li>
+			<li>全局函数是 window 对象的方法。</li>
+			<li>甚至（HTML DOM 的）document 对象也是 window 对象属性</li>
+		</ul>
+		
+		<h4>窗口尺寸（兼容写法）</h4>
+		<ul>
+			<li>var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;</li>
+			<li>var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; </li>
+		</ul>
+		
+		<h4>其他窗口方法</h4>
+		<ul>
+			<li>window.open() - 打开新窗口</li>
+			<li>window.close() - 关闭当前窗口</li>
+			<li>window.moveTo() - 移动当前窗口</li>
+			<li>window.resizeTo() - 重新调整当前窗口</li>
+		</ul>
+	</body>
+</html>

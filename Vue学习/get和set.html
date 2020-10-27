@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>get和set</title>
+	</head>
+	<body>
+		<!-- 输入框 -->
+		<input type="text" name="" id="" value="" oninput="changeInput(this.value)" />
+		<!-- 显示输入内容 -->
+		<div class="showInputContent"></div>
+		
+		<script type="text/javascript">
+			var showInput = {};   // 1.创建对象
+			var showInputContent = document.getElementsByClassName('showInputContent')[0];
+			
+			function changeInput(value) {
+				showInput.val = value;   // 2.创建对象属性并赋值
+			}
+			Object.defineProperty(showInput, 'val', {     // 参数1，showInput为对象   参数2，'val'为对象属性   参数3，方法函数   
+				set:function(newVal) {
+					showInputContent.innerText = newVal;
+				},
+				get:function() {
+					return val;
+				}
+			})   
+		</script>
+	</body>
+</html>

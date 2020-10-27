@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM方法</title>
+	</head>
+	<body>
+		<h3>使用 document 对象来访问和操作 HTML 的实例。</h3>
+		
+		<h4>查找 HTML 元素：</h4>
+		<ul>
+			<li>document.getElementById(id) -- id</li>
+			<li>document.getElementsByClassName(name) -- 类名</li>
+			<li>document.getElementsByTagName(name) -- 标签名</li>
+		</ul>
+		
+		<h4>改变 HTML 元素：</h4>
+		<ul>
+			<li>获取的元素.innerHTML = 新的显示内容 -- 改变元素的 inner HTML</li>
+			<li>获取的元素.属性 = 属性值 -- 改变 HTML 元素的属性值</li>
+			<li>获取的元素.setAttribute(属性, 属性值) -- 改变 HTML 元素的属性值</li>
+			<li>获取的元素.style.属性 = 属性值 -- 改变 HTML 元素的样式</li>
+		</ul>
+		
+		<h4>添加和删除元素：</h4>
+		<ul>
+			<li>document.createElement(获取的元素) -- 创建 HTML 元素</li>
+			<li>document.removeChild(获取的元素) -- 删除 HTML 元素</li>
+			<li>document.appendChild(获取的元素) -- 添加 HTML 元素</li>
+			<li>document.replaceChild(获取的元素) -- 替换 HTML 元素</li>
+			<li>document.write(text) -- 写入 HTML 输出流</li>
+		</ul>
+		
+		<h4>添加事件处理程序：</h4>
+		<ul>
+			<li>document.getElementById(id).onclick = function(){ ... } -- 向 onclick 事件添加事件处理程序</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var pTextIndent = document.getElementsByTagName("li");   //getElementsByTagName获取的是数组，如果要操作全部的li标签，则需要进行遍历，再对每一项进行操作，如果针对某一个，则可用.getElementsByTagName("li")[n]的方式;
+			for(let i=0; i < pTextIndent.length; i++) {   //遍历
+				pTextIndent[i].style.textIndent = '2em';    //让每一个li标签都段前空两格
+			}
+		</script>
+	</body>
+</html>

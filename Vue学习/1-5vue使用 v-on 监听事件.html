@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			v-on监听事件：
+			<button v-on:click="showAll">按钮</button>
+			v-on可缩写为@：
+			<button @click="showAll">按钮</button>
+			<br>
+			事件修饰符：
+				.stop：等同于JavaScript中的event.stopPropagation()，阻止冒泡（通俗讲就是阻止事件向上级DOM元素传递）
+				.prevent：等同于JavaScript中的event.preventDefault()， 默认事件指对DOM的操作会引起自动执行的动作，比如点击超链接的时候会进行页面的跳转，点击表单提交按钮时会重新加载页面等，使用".prevent"修饰符可以阻止这些事件的发生。
+				.capture：与事件冒泡的方向相反，事件捕获由外到内
+				.self：只会触发自己范围内的事件，不包含子元素
+				.once：只会触发一次
+		</div>
+		<script>
+			const app = new Vue({
+				el:'#app',
+				data(){
+					return {
+						message:"Hello Vue"
+					}
+				},
+				methods:{
+					showAll: function() {
+						alert('监听按钮触发');
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

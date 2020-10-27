@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM事件</title>
+	</head>
+	<body>
+		<h3>JavaScript 能够在事件发生时执行</h3>
+		
+		<h4>HTML 事件的例子：</h4>
+		<ul>
+			<li>当用户点击鼠标时</li>
+			<li>当网页加载后</li>
+			<li>当图像加载后</li>
+			<li>当鼠标移至元素上时</li>
+			<li>当输入字段被改变时</li>
+			<li>当 HTML 表单被提交时</li>
+			<li>当用户敲击按键时</li>
+		</ul>
+		
+		<h4>onload 和 onunload 事件：</h4>
+		<ul>
+			<li>进入页面时，会触发onload事件。</li>
+			<li>离开页面时，会触发onunload事件。</li>
+			<li>onload 事件可用于检测访问者的浏览器类型和浏览器版本，然后基于该信息加载网页的恰当版本。onload 和 onunload 事件可用于处理 cookie。</li>
+		</ul>
+		
+		<h4>onchange 事件：</h4>
+		<ul>
+			<li>onchange 事件经常与输入字段验证结合使用。</li>
+		</ul>
+		
+		<h4>onmouseover 和 onmouseout 事件：</h4>
+		<ul>
+			<li>onmouseover事件,鼠标移至元素上触发某个函数</li>
+			<li>onmouseout事件,鼠标移出元素上触发某个函数</li>
+		</ul>
+		
+		<h4>onmousedown, onmouseup 以及 onclick 事件：</h4>
+		<ul>
+			<li>onmousedown, onmouseup 以及 onclick 事件构成了完整的鼠标点击事件。</li>
+			<li>当鼠标按钮被点击时，onmousedown 事件被触发</li>
+			<li>当鼠标按钮被释放时，onmouseup 事件被触发</li>
+			<li>鼠标点击完成后，onclick 事件被触发</li>
+		</ul>
+		
+		<h4>onfocus事件：</h4>
+		<ul>
+			<li>输入框失去焦点时触发某个函数</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var pTextIndent = document.getElementsByTagName("li");   //getElementsByTagName获取的是数组，如果要操作全部的li标签，则需要进行遍历，再对每一项进行操作，如果针对某一个，则可用.getElementsByTagName("li")[n]的方式;
+			for(let i=0; i < pTextIndent.length; i++) {   //遍历
+				pTextIndent[i].style.textIndent = '2em';    //让每一个li标签都段前空两格
+			}
+		</script>
+	</body>
+</html>

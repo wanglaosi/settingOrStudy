@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>tab静态选项卡</title>
+		<style type="text/css">
+			.title ul {
+				padding: 0;margin: 0;
+			}
+			.title li {
+				height: 40px;
+				width: 120px;
+				line-height: 40px;
+				text-align: center;
+				display: block;
+				background-color: #1E90FF;
+				float: left;
+			}
+			.title,.content {
+				width: 480px;
+			}
+			.content ul {
+				padding: 0;margin: 0;
+			}
+			.content li {
+				height: 80px;
+				width: 50%;
+				float: left;
+				line-height: 80px;
+				text-align: center;
+				display: block;
+				background-color: #CCCCCC;
+			}
+			.select {
+				background-color: #CCCCCC !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			<ul class="titleUl">
+				<li>名称</li>
+				<li>类型</li>
+				<li>范围</li>
+				<li>价格</li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul>
+				<li>名称1</li>
+				<li>名称2</li>
+				<li>名称3</li>
+				<li>名称4</li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul>
+				<li>类型1</li>
+				<li>类型2</li>
+				<li>类型3</li>
+				<li>类型4</li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul>
+				<li>范围1</li>
+				<li>范围2</li>
+				<li>范围3</li>
+				<li>范围4</li>
+			</ul>
+		</div>
+		<div class="content">
+			<ul>
+				<li>价格1</li>
+				<li>价格2</li>
+				<li>价格3</li>
+				<li>价格4</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				// 初始化索引
+				var index = 0;
+				var titleAll = document.querySelectorAll('.title>ul>li');
+				var contentAll = document.getElementsByClassName('content');
+				
+				panduan(index);   // 执行第一次
+				
+				for(var i = 0; i < titleAll.length; i++) {   	// 循环titleAll
+					titleAll[i].index = i;		// 将i的值赋到对应的titleAll上，这样才能在点击事件里获取对应的索引,如果不用，在点击事件里打印i的值都是titleAll.length，这是闭包所致
+					titleAll[i].onclick = function(event){     // 添加点击事件
+						panduan(this.index);     // this.index为当前索引，传入函数中显示
+					}
+					// // titleAll[i].index = i;
+					// titleAll[i].onclick = function(){
+					// 	console.log(i)    // 闭包导致打印的i都是titleAll.length
+					// }
+				}
+				
+				function panduan(index){      // panduan函数显示当前索引的数据，隐藏其它数据
+					for(var i = 0,len = contentAll.length; i < len; i++) {
+						titleAll[i].className = '';
+						contentAll[i].style.display = 'none';
+					}
+					titleAll[index].className = 'select';
+					contentAll[index].style.display = 'block';
+				}
+			}
+		</script>
+	</body>
+</html>

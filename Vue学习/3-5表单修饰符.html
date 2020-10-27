@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修饰符</title>
+		<script src="./js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>1.修饰符 lazy ，从而转变为在 change 事件中同步：</p>
+		  <input type="text" v-model.lazy="ok1" />
+		 
+		  <div id="output">
+		      输入完成后change时显示: {{ok1}}
+		  </div>
+			<hr />
+			<p>2.修饰符 number 给 v-model 来处理输入值</p>
+			<input type="number" v-model.number="ok2" />
+			
+			<div id="output">
+			    只有输入数字有效: {{ok2}}
+			</div>
+			<hr />
+			<p>3.自动过滤用户输入的首尾空格，可以添加 trim 修饰符到 v-model 上过滤输入</p>
+			<input type="text" v-model.trim="ok3" />
+			
+			<div id="output">
+			    自动过滤用户输入的首尾空格: {{ok3}}
+			</div>
+		</div>
+		 
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					ok1: '',
+					ok2: '',
+					ok3: '',
+				},
+				mounted() {
+					
+				}
+			})
+		</script>
+	</body>
+</html>

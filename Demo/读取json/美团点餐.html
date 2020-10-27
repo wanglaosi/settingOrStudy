@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>美团点餐</title>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			li {
+				list-style: none;
+			}
+			.all {
+				width: 70%;
+				margin: auto;
+				border: #1E90FF 1px solid;
+				height: 1200px;
+			}
+			.left {
+				width: 30%;
+				float: left;
+			}
+			.left ul li {
+				display: block;
+				height: 20px;
+			}
+			.right {
+				width: 70%;
+				float: left;
+			}
+			.right ul li {
+				display: block;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app" class="all">
+			<div class="left">
+				<ul>
+					<li v-for="v in caiAll">{{v.name}}{{v.number}}{{v.money}}</li>
+				</ul>
+			</div>
+			<div class="right">
+				<ul>
+					<li v-for="v in cai">{{v.id}}</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			const app = new Vue({
+				el:'#app',
+				data:{
+					caiAll:[],
+					cai:[],
+					xianshi:0,
+				},
+				created() {
+					this.getAll();
+				},
+				methods: {
+					getAll:function() {
+						var that = this;
+						$.ajax({
+							url:'meituandianchan.json',
+							method:'get',
+							success: function(res) {
+								that.caiAll = res.caiAll;
+								
+								that.cai = res.cai;
+								console.log(that.cai);
+							},
+							err: function(err) {
+								console.log(err);
+							}
+						})
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
