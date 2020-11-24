@@ -1,0 +1,8 @@
+Bracket Pair Colorizer
+Chinese (Simplified) Language Pack for Visual Studio Code
+Easy LESS
+ESLint
+Git History
+GitLens — Git supercharged
+Vetur
+Vue VSCode Snippets

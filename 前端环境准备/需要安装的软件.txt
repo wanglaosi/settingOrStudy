@@ -1,0 +1,8 @@
+1、微信开发者工具
+2、vscode
+3、node.js环境
+4、谷歌浏览器
+5、HbuilderX
+6、Git
+
+需要学会使用vscode的git工具管理源代码

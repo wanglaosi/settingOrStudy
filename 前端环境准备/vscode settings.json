@@ -1,0 +1,41 @@
+{
+  "git.confirmSync": false,
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "editor.insertSpaces": true,
+  "git.enableSmartCommit": true,
+  "html.format.indentHandlebars": true,
+  "eslint.run": "onSave",
+  "files.insertFinalNewline": true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      // 格式化不加分号
+      "semi": false,
+      // 格式化为单引号
+      "singleQuote": true
+    },
+    "js-beautify-html": {
+      "wrap_line_length": 100,
+      "wrap_attributes": "auto",
+      "end_with_newline": false
+    }
+  },
+  // 在方法括号之间插入空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "editor.formatOnSave": true,
+  "vetur.format.defaultFormatter.less": "prettier",
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "window.zoomLevel": 0
+}
