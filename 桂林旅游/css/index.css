@@ -1,0 +1,188 @@
+body{margin:0; padding:0}
+p {color: #606266;}
+/*logo*/
+.logo{ margin:0 auto; width:960px; height:300px; background-image: url(../img/201608040147553317.gif);background-size: cover;text-align: center;line-height: 300px;box-sizing: border-box;color: deepskyblue;}
+/*导航栏*/
+.Navigation{ background:#606266; width:960px; height:30px; margin:0 auto; padding-left: 10px; box-sizing: border-box;}
+.Navigation a{ text-decoration: none; line-height: 30px;color: #FFFFFF;}
+.all {
+	width:100%;
+	height:30px;
+	padding-left:10px;
+	color: #FFFFFF;
+}
+.all li {
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	margin-right:10px;
+	display:inline;
+	position:relative;
+	cursor:pointer;
+	background-color: #606266;
+}
+.all ul {
+	position:absolute;
+	left:0;
+	top:30px;
+	display:none;
+}
+
+/*内容*/
+.content{ background:#ffffff; width:960px; height:635px; margin:0 auto}
+/*第一版块*/
+.contentone{ background:#ffffff; width:960px; height:300px; margin:0 auto}
+/*栏目一*/
+.lanmuyi{ background:#ffffff; width:250px; height:300px; float:left;border:2px solid #EBEEF5;overflow: hidden;}
+.lanmuheadyi{ background:#909399; width:250px;height:30px}
+.lanmunameyi{ width:135px;height:30px; float:left}
+.lanmumoreyi{ width:135px;height:30px; float:right;}
+.nameyi{ text-align:left; color:#ffffff; font-size:14px; margin:0 0 0 10px}
+.moreyi{ text-align:right; color:#ffffff; font-size:14px; margin:0 0 0 60px}
+/*栏目二*/
+.lanmuer{ background:#fff; width:408px; height:300px; float:left;border:2px solid #EBEEF5;overflow: hidden;margin-left: 20px;}
+.lanmuheader{ background:#909399; width:408px;height:30px}
+.lanmunameer{ width:180px;height:30px; float:left}
+.lanmumoreer{ width:180px;height:30px; float:right;}
+.nameer{ text-align:left; color:#fff; font-size:14px; margin:0 0 0 10px}
+.moreer{ text-align:right; color:#fff; font-size:14px; margin:0 0 0 180px}
+/*栏目三*/
+.lanmusan{ background:#ffffff; width:250px; height:300px; float:right;border:2px solid #EBEEF5;}
+.lanmuheadsan{ width:250px;height:30px;padding: 0;}
+p { text-indent: 2em;}
+/*第二版块*/
+.contenttwo{ background:#ffffff; width:960px; height:300px; margin:0 auto}
+/*栏目四*/
+.lanmusi{ background:#fff; width:466px; height:300px; float:left;border:2px solid #EBEEF5; margin:0 20px 0 0}
+.lanmuheadsi{ background:#909399; width:466px;height:30px}
+.lanmunamesi{ width:240px;height:30px; float:left}
+.lanmumoresi{ width:240px;height:30px; float:right;}
+.namesi{ text-align:left; color:#ffffff; font-size:14px; margin:0 0 0 10px}
+.moresi{ text-align:right; color:#ffffff; font-size:14px; margin:0 0 0 170px}
+/*栏目五*/
+.lanmuwu{ background:#fff; width:466px; height:300px; float:left;border:2px solid #EBEEF5; margin:0 0 0 0}
+.lanmuheadwu{ background:#909399; width:466px;height:30px}
+.lanmunamewu{ width:240px;height:30px; float:left}
+.lanmumorewu{ width:240px;height:30px; float:right;}
+.namewu{ text-align:left; color:#ffffff; font-size:14px; margin:0 0 0 10px}
+.morewu{ text-align:right; color:#ffffff; font-size:14px; margin:0 0 0 170px}
+ 
+/*底部*/
+.footer{ background:#909399; width:960px; height:80px; margin:0 auto; text-align: center;}
+/*间隙*/
+.jianxi1{ background:#ffffff; height:5px; margin:0 auto}
+.jianxi2{ background:#ffffff; height:10px; margin:0 auto}
+.jianxi3{ background:#ffffff; height:20px; margin:0 auto}
+
+.div_photo{ height:300px;width:27%;float:left;margin-left:40px;margin-top:15px;overflow: hidden;}
+.div_phototime{ height:25px;width:100%;text-align:center;line-height:25px;background-color:#A9A9A9;}
+
+/* tab */
+nav {
+	width: 100%;
+	display: block;
+}
+.nav1 {
+	cursor: pointer;
+	float: left;
+	width: 25%;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px 0 10px 0;
+	background-color: #00BFFF;
+}
+.nav1Select {
+	background-color: forestgreen !important;
+}
+.content .div_show p{
+	font-size: 18px;
+	line-height: 2em;
+}
+
+/* 关于页面 */
+.content1 {
+	height: 400px;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+.content1Left {
+	width: 50%;
+	float: left;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.content1Right {
+	width: 50%;
+	float: right;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+/* 登录注册页面 */
+table {
+	margin-top: 20px;
+	font-size: 18px;
+}
+table tr {
+	
+}
+button  {
+	height: 40px;
+	width: 80px;
+	background-color: white;
+	color: #00BFFF;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.table {
+ width: 100%;
+ /* height: 300px; */
+ border-collapse: collapse;
+ table-layout: fixed;
+ text-align: center;
+ font-size: 18px;
+ margin: 0 auto;
+ }
+ 
+ a {
+ text-decoration: none;
+ color: black;
+ }
+ 
+ .table tr {
+ height: 50px;
+ }
+ 
+ .check {
+ width: 20px;
+ height: 20px;
+ }
+ 
+ .checkOnly {
+ width: 20px;
+ height: 20px;
+ }
+ 
+ .empty {
+ font-size: 25px;
+ position: fixed;
+ top: 45%;
+ left: 45%;
+ display: none;
+ }
+ 
+ .empty a {
+ color: pink;
+ }
+ 
+ .empty a:hover {
+ text-decoration: underline;
+ }
+ 
+ .content2 {
+	 min-height: 1100px;
+ }

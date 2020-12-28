@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.big {
+				width: 420px;
+				margin: auto;
+			}
+			.top {
+				padding-bottom: 20px;
+			}
+			.pople {
+				height: 300px;
+				width: 50%;
+				float: left;
+			}
+			.target {
+				height: 300px;
+				width: 50%;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">
+			<div class="top pople">
+				<h3>人物属性：</h3>
+				攻击力：<input type="text" class="pople_1" /><br>
+				暴击率(%)：<input type="text" class="pople_2" /><br>
+				暴击伤害：<input type="text" class="pople_3" /><br>
+				破甲：<input type="text" class="pople_4" /><br>
+				增伤：<input type="text" class="pople_5" /><br>
+			</div>
+			<div class="top target">
+				<h3>目标属性：</h3>
+				护甲：<input type="text" class="target_1" /><br>
+				减伤：<input type="text" class="target_2" /><br>
+				血量：<input type="text" class="target_3" /><br>
+			</div>
+			<div class="top other">
+				<h3>额外属性：</h3>
+				攻击次数：<input type="text" class="other_1" value="1" /><br>
+			</div>
+			<button type="button" class="button">计算伤害</button>
+		</div>
+		<script src="./jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.button').click(function() {
+					//获取人物属性
+					var pople_1 = Number($('.pople_1').val()); 
+					var pople_2 = Number($('.pople_2').val()); 
+					var pople_3 = Number($('.pople_3').val()); 
+					var pople_4 = Number($('.pople_4').val()); 
+					var pople_5 = Number($('.pople_5').val()); 
+					//获取目标属性
+					var target_1 = Number($('.target_1').val()); 
+					var target_2 = Number($('.target_2').val()); 
+					var target_3 = Number($('.target_3').val()); 
+					//获取攻击次数
+					var other_1 = $('.other_1').val();
+					
+					//计算暴击概率
+					if(Math.ceil(Math.random()*100)<pople_2){
+						pople_2 = pople_3
+					}else{
+						pople_2 = 0
+					}
+					//计算人物造成的伤害
+					var pople = pople_1+pople_2+pople_4+pople_5;
+					var target = target_1+target_2;
+					//计算造成的伤害量
+					var shanghai = 0;
+					if(pople>target) {
+						shanghai = pople-target
+					}
+					//显示总伤害
+					if(other_1=='' || other_1 == null) {
+						alert('请输入攻击次数');
+					}else {
+						alert('你的伤害为'+other_1*shanghai);
+					}
+				})
+			});
+		</script>
+	</body>
+</html>
